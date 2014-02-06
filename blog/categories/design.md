@@ -1,8 +1,10 @@
 ---
-layout: blog
+layout: default
+title: Design Category
+permalink: /design/
 ---
 
-<h1>You're in design category</h1>
+#Design
 
 {% assign loopData = site.categories.design %}
 {% include post-list.html url=post.url title=post.title meta=post.meta %}
