@@ -1,5 +1,5 @@
 ---
-layout: news
+layout: blog
 title: Adam Poczatek
 meta: Welcome to my site!
 category: news
