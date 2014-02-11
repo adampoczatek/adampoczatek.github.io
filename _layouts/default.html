@@ -1,14 +1,31 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title></title>
-    <link rel="stylesheet" href="/css/base.css" />
-</head>
+    <head>
+        <title>{{ page.title }}</title>
+        <meta name="description" content="{{ page.description }}">
+        <meta name="viewport" content="width=device-width, minimum-scale=1.0">
+        <meta charset="UTF-8">
 
-<header>
-    {% include nav.html navclass='nav-top' %}
-</header>
-<body>
-    {{content}}
-</body>
+        <link href="//fonts.googleapis.com/css?family=Anaheim" rel="stylesheet">
+        <link href="/css/base.min.css" rel="stylesheet">
+    </head>
+    <body>
+        <header class="site-header">
+            <a href="/" class="logo logo--main">
+                <h1 class="logo__title">Adam Poczatek</h1>
+                <p class="logo__subtitle">UI Designer & Front-end Developer</p>
+            </a>
+            {% include site-nav.html navclass='nav--main' %}
+        </header>
+
+        <main class="site-main">
+        {{ content }}
+        </main>
+
+        <footer class="site-footer">
+            <p>Extreme Progressive Enhancement</p>
+            <p>&copy; 2014 <a href="/contact/">Adam Poczatek</a></p>
+            <p><a href="//twitter.com/ad4z">@ad4z</a> | <a href="//github.com/adaz">GitHub</a></p>
+        </footer>
+    </body>
 </html>

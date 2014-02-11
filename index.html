@@ -1,5 +1,8 @@
 ---
 layout: default
+title: Adam Poczatek - UI Designer and Front-end Developer.
+description: Writting about HTML, CSS, JavaScript and other web stuff.
 ---
 
-<h1>Index</h1>
+{% assign loopData = site.posts %}
+{% include post-list.html url=post.url title=post.title meta=post.meta %}
