@@ -1,0 +1,25 @@
+/*------------------------------------*\
+    #TYPOGRAPHY
+\*------------------------------------*/
+/**
+ * Everything related to typography.
+ */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font: {
+        family: "Roboto Slab", sans-serif;
+        weight: 700;
+    }
+}
+
+html {
+    font: {
+        family: "Roboto Slab", sans-serif;
+        weight: 100;
+    }
+}
