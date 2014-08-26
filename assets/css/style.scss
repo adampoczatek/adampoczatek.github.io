@@ -56,26 +56,14 @@
 
 
 /*------------------------------------*\
-    #OBJECTS
-\*------------------------------------*/
-/**
- * These are design-free objects, abstractions and design patterns. These create
- * constructs that you lay your designs over.
- */
-@import "objects/all";
-
-
-
-
-
-/*------------------------------------*\
-    #GUI
+    #COMPONENTS
 \*------------------------------------*/
 /**
  * These are your components and modules; things like buttons, accordions,
  * carousels, etc.
  */
-@import "gui/all";
+@import "components/all";
+
 
 
 

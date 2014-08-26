@@ -18,3 +18,14 @@ $show-baseline-grid:    false;
  * variables sourced from other settings.
  */
 $base--spacing-unit:    1em;
+
+
+/**
+ * Breakpoints
+ */
+
+$breakpoint--small: 28em;
+
+$breakpoint--medium: 48em;
+
+$breakpoint--large: 68em;

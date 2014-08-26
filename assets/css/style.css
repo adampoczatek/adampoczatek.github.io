@@ -34,6 +34,9 @@
  * Framework variables. We don’t need to edit these, they’re just handy
  * variables sourced from other settings.
  */
+/**
+ * Breakpoints
+ */
 /*------------------------------------*\
     #BRAND
 \*------------------------------------*/
@@ -43,6 +46,12 @@
 /*------------------------------------*\
     #TYPE
 \*------------------------------------*/
+.type--left {
+  text-align: left; }
+
+.type--right {
+  text-align: right; }
+
 /*------------------------------------*\
     #FUNCTIONS
 \*------------------------------------*/
@@ -553,31 +562,174 @@ html {
   font-weight: 100; }
 
 /*------------------------------------*\
-    #OBJECTS
-\*------------------------------------*/
-/**
- * These are design-free objects, abstractions and design patterns. These create
- * constructs that you lay your designs over.
- */
-/*------------------------------------*\
-    #OBJECTS
-\*------------------------------------*/
-/**
- * Pull in all our objects and abstractions.
- */
-/*------------------------------------*\
-    #GUI
+    #COMPONENTS
 \*------------------------------------*/
 /**
  * These are your components and modules; things like buttons, accordions,
  * carousels, etc.
  */
 /*------------------------------------*\
-    #GUI
+    #COMPONENTS
 \*------------------------------------*/
 /**
- * Pull in all our GUI components.
+ * Pull in all our components.
  */
+/*------------------------------------*\
+    #BOX
+\*------------------------------------*/
+.box {
+  padding: 1em; }
+
+.box--contrast {
+  background: #2e353a; }
+
+/*------------------------------------*\
+    #GRID
+\*------------------------------------*/
+/**
+ * Simple grid layout based on Snook's idea
+ * Source: http://snook.ca/archives/html_and_css/rethinking-the-grid
+ */
+.grid {
+  display: -ms-Flexbox;
+  -ms-box-orient: horizontal;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex; }
+
+.grid__cell {
+  -webkit-flex: 1;
+  -moz-flex: 1;
+  -ms-flex: 1;
+  -o-flex: 1;
+  flex: 1; }
+
+.grid__cell--half {
+  -webkit-flex: 0 0 50%;
+  -moz-flex: 0 0 50%;
+  -ms-flex: 0 0 50%;
+  -o-flex: 0 0 50%;
+  flex: 0 0 50%; }
+
+.grid__cell--third {
+  -webkit-flex: 0 0 33.333%;
+  -moz-flex: 0 0 33.333%;
+  -ms-flex: 0 0 33.333%;
+  -o-flex: 0 0 33.333%;
+  flex: 0 0 33.333%; }
+
+.grid__cell--quarter {
+  -webkit-flex: 0 0 25%;
+  -moz-flex: 0 0 25%;
+  -ms-flex: 0 0 25%;
+  -o-flex: 0 0 25%;
+  flex: 0 0 25%; }
+
+.grid__cell--fifth {
+  -webkit-flex: 0 0 20%;
+  -moz-flex: 0 0 20%;
+  -ms-flex: 0 0 20%;
+  -o-flex: 0 0 20%;
+  flex: 0 0 20%; }
+
+/*------------------------------------*\
+    #LAYOUT
+\*------------------------------------*/
+@media all and (min-width: 28em) {
+  .l--main {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto; } }
+@media all and (min-width: 48em) {
+  .l--main {
+    width: 80%; } }
+@media all and (min-width: 68em) {
+  .l--main {
+    max-width: 68em; } }
+
+/*------------------------------------*\
+    #LIST
+\*------------------------------------*/
+.list--posts .list__item {
+  padding: 1em; }
+.list--posts .list__item-heading,
+.list--posts .list__item-meta {
+  margin: 0; }
+.list--posts .list__item {
+  border-bottom: 0.1em solid #cbd8e2; }
+
+/*------------------------------------*\
+    #LOGO
+\*------------------------------------*/
+.logo {
+  display: inline-block;
+  padding: 1em;
+  text-align: center; }
+
+.logo__title,
+.logo__subtitle {
+  margin: 0;
+  padding: 0;
+  line-height: 1.2; }
+
+.logo__title {
+  font-size: 1.8em;
+  font-family: "Roboto", serif;
+  font-weight: 100; }
+
+.logo__subtitle {
+  font-size: 1em;
+  font-family: "Roboto Slab", sans-serif;
+  font-weight: 100; }
+
+.logo--contrast .logo__title {
+  color: white; }
+.logo--contrast .logo__subtitle {
+  color: #78898f; }
+
+.logo--main {
+  display: block; }
+
+/*------------------------------------*\
+    #NAV
+\*------------------------------------*/
+.nav__item {
+  display: inline-block; }
+
+.nav--main .nav__link {
+  display: block;
+  padding: 1em;
+  border-bottom: 0.1em solid; }
+
+.nav--contrast .nav__link {
+  color: #fafad7;
+  border-bottom-color: #fafad7; }
+.nav--contrast .nav__item--current .nav__link {
+  color: #ff6969;
+  border-bottom-color: #ff6969; }
+
+/*------------------------------------*\
+    #TOUCH
+\*------------------------------------*/
+/**
+ * Simple component/helper for mobile users. It increases the
+ * clickable area to the size of it's parent.
+ */
+.touch {
+  position: relative; }
+
+.touch__control {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 0; }
+  @media all and (min-width: 28em) {
+    .touch__control {
+      display: none; } }
+
 /*------------------------------------*\
     #TRUMPS
 \*------------------------------------*/
@@ -716,3 +868,12 @@ html {
 
 .float--left {
   float: left !important; }
+
+.reset, .list--posts, .nav__list {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+.center--horizontal, .logo--main {
+  margin-left: auto;
+  margin-right: auto; }

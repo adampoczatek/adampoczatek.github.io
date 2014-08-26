@@ -1,8 +1,21 @@
-<ul class="post-list">
+<ul class="[ list list--posts ]">
     {% for post in loopData %}
-    <li class="post-list__item">
-        <h2 class="post-list__title"><a href="{{post.url}}">{{post.title}}</a></h2>
-        <p class="post-list__excerpt">{{post.meta}}</p>
+
+    <li class="list__item touch">
+        <a href="{{post.url}}" class="touch__control"></a>
+
+        {% if forloop.index == 1 %}
+
+        <h1 class="list__item-heading"><a href="{{post.url}}">{{post.title}}</a></h1>
+
+        {% else %}
+
+        <h2 class="list__item-heading"><a href="{{post.url}}">{{post.title}}</a></h2>
+
+        {% endif %}
+
+        <p class="list__item-meta">Published on {{post.date | date: "%-d %B %Y"}}</p>
     </li>
+
     {% endfor %}
 </ul>

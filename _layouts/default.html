@@ -10,21 +10,29 @@
         <link href="/assets/css/style.css" rel="stylesheet">
     </head>
     <body>
-        <header class="site-header">
-            <a href="/" class="logo logo--main">
-                <h1 class="logo__title">Adam Poczatek</h1>
-                <p class="logo__subtitle"></p>
-            </a>
-            {% include site-nav.html navclass='nav--main' %}
+        <header class="[ box box--contrast ]">
+            <div class="l--main">
+                <a href="/" class="[ logo logo--contrast logo--main ]">
+                    <h1 class="logo__title">Adam Poczatek</h1>
+                    <p class="logo__subtitle">User Interface Developer</p>
+                </a>
+                {% include site-nav.html navclass='nav--main nav--contrast' %}
+            </div>
         </header>
 
-        <main class="site-main">
+        <main class="l--main">
         {{ content }}
         </main>
 
         <footer class="site-footer">
-            <p>&copy; 2014 <a href="/contact/">Adam Poczatek</a></p>
-            <p><a href="//twitter.com/adampoczatek">@adampoczatek</a> | <a href="//github.com/adampoczatek">GitHub</a></p>
+            <div class="l--main grid box">
+                <div class="grid__cell grid__cell--third">
+                    <p class="reset">&copy; 2014</p>
+                </div>
+                <div class="grid__cell">
+                    <p class="reset type--right"><a href="//twitter.com/adampoczatek">@adampoczatek</a> | <a href="//github.com/adampoczatek">GitHub</a></p>
+                </div>
+            </div>
         </footer>
     </body>
 </html>

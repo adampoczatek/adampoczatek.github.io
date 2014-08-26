@@ -1,0 +1,27 @@
+/*------------------------------------*\
+    #LAYOUT
+\*------------------------------------*/
+
+.l--main {
+
+    @media all and (min-width: $breakpoint--small) {
+        & {
+            width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    @media all and (min-width: $breakpoint--medium) {
+        & {
+            width: 80%;
+        }
+    }
+
+    @media all and (min-width: $breakpoint--large) {
+        & {
+            max-width: $breakpoint--large;
+        }
+    }
+}
+

@@ -1,0 +1,41 @@
+/*------------------------------------*\
+    #NAV
+\*------------------------------------*/
+
+.nav {
+
+}
+
+.nav__list {
+    @extend .reset;
+}
+
+.nav__item {
+    display: inline-block;
+}
+
+// .nav--main
+
+.nav--main {
+    .nav__link {
+        display: block;
+        padding: $base--spacing-unit;
+
+        border-bottom: $brand--nav-border-style;
+    }
+}
+
+// .nav--contrast
+.nav--contrast {
+    .nav__link {
+        color: $brand--link-color--contrast;
+        border-bottom-color: $brand--link-color--contrast;
+    }
+
+    .nav__item--current {
+        .nav__link {
+            color: $brand--link-color-current--contrast;
+            border-bottom-color: $brand--link-color-current--contrast;
+        }
+    }
+}

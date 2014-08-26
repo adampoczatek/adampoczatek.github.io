@@ -1,0 +1,53 @@
+/*------------------------------------*\
+    #LOGO
+\*------------------------------------*/
+
+.logo {
+    display: inline-block;
+    padding: $base--spacing-unit;
+
+    text-align: center;
+}
+
+.logo__title,
+.logo__subtitle {
+    margin: 0;
+    padding: 0;
+
+    line-height: 1.2;
+}
+
+.logo__title {
+    font: {
+        size: 1.8em;
+        family: "Roboto", serif;
+        weight: 100;
+    }
+}
+
+.logo__subtitle {
+    font: {
+        size: 1em;
+        family: "Roboto Slab", sans-serif;
+        weight: 100;
+    }
+}
+
+// .logo--contrast
+
+.logo--contrast {
+    .logo__title {
+        color: $brand--text--contrast--high;
+    }
+
+    .logo__subtitle {
+        color: $brand--text--contrast--low;
+    }
+}
+
+// .logo--main
+
+.logo--main {
+    display: block;
+    @extend .center--horizontal;
+}
