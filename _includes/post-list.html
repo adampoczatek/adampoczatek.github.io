@@ -4,17 +4,17 @@
     <li class="list__item touch">
         <a href="{{post.url}}" class="touch__control"></a>
 
-        {% if forloop.index == 1 %}
-
-        <h1 class="list__item-heading"><a href="{{post.url}}">{{post.title}}</a></h1>
-
-        {% else %}
-
-        <h2 class="list__item-heading"><a href="{{post.url}}">{{post.title}}</a></h2>
-
-        {% endif %}
-
-        <p class="list__item-meta">Published on {{post.date | date: "%-d %B %Y"}}</p>
+        <article class="post post--listing l--main">
+            <div class="post__image">
+                {% if post.image %}
+                <img src="{{post.image}}" class="adjust-img" />
+                {% endif %}
+            </div>
+            <div class="post__content">
+                <h2 class="post__heading"><a href="{{post.url}}">{{post.title}}</a></h2>
+                <p class="post__meta">Published on {{post.date | date: "%-d %B %Y"}}</p>
+            </div>
+        </article>
     </li>
 
     {% endfor %}

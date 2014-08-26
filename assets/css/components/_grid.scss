@@ -16,6 +16,9 @@
     display: flex;
 }
 
+.grid--center { @include vendor(align-items, center); }
+
+
 .grid__cell { @include vendor(flex, 1); }
 
 .grid__cell--half    { @include vendor(flex, 0 0 50%); }
@@ -25,3 +28,5 @@
 .grid__cell--quarter { @include vendor(flex, 0 0 25%); }
 
 .grid__cell--fifth   { @include vendor(flex, 0 0 20%); }
+
+.grid__cell--tenth   { @include vendor(flex, 0 0 10%); }

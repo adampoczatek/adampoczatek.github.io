@@ -1,0 +1,31 @@
+/*------------------------------------*\
+    #POST
+\*------------------------------------*/
+
+.post {
+
+}
+
+.post__footer {
+    @extend .space--top;
+}
+
+.post--listing {
+    @extend .grid;
+    @extend .grid--center;
+
+    .post__image,
+    .post__content {
+        @extend .grid__cell;
+    }
+
+    .post__image {
+        @extend .grid__cell--tenth;
+        margin-right: $base--spacing-unit;
+    }
+
+    .post__heading {
+        margin-bottom: $base--spacing-unit / 3;
+        line-height: 1.2;
+    }
+}

@@ -20,5 +20,9 @@ html {
 
         background-image: url(http://basehold.it/i/#{$baseline-size});
     }
+
+    @media all and (min-width: $breakpoint--medium) {
+        font-size: 1.2em;
+    }
 }
 

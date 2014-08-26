@@ -1,10 +1,11 @@
 ---
 layout: post
-title: Random post
+title: Looking into Object.observe()
 meta: Post
 category: development
+image: /assets/images/posts/js-logo-300x300.png
 ---
 
-#Ssup
+#Don't get your hopes up, it's a fake post.
 
-post post lolz
+Tesing my new site!

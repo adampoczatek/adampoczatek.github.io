@@ -476,13 +476,16 @@ img {
  * base line-height. This allows us to keep a consistent vertical rhythm.
  * As per: csswizardry.com/2012/06/single-direction-margin-declarations
  */
-h1, h2, h3, h4, h5, h6, hgroup,
+h1, h2, h3, h4, h5, h6,
 ul, ol, dl,
 blockquote, p, address,
 table,
 fieldset, figure,
 pre {
-  margin-bottom: 1em; }
+  margin-bottom: 0.5em; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0.25em; }
 
 /**
  * Where `margin-left` is concerned we want to try and indent certain elements
@@ -535,6 +538,9 @@ html {
   line-height: 1.5;
   /* [1] */
   color: #78898f; }
+  @media all and (min-width: 48em) {
+    html {
+      font-size: 1.2em; } }
 
 /*------------------------------------*\
     #LINKS
@@ -559,7 +565,10 @@ h6 {
 
 html {
   font-family: "Roboto Slab", sans-serif;
-  font-weight: 100; }
+  font-weight: 400; }
+  @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+    html {
+      font-weight: 100; } }
 
 /*------------------------------------*\
     #COMPONENTS
@@ -584,13 +593,31 @@ html {
   background: #2e353a; }
 
 /*------------------------------------*\
+    #BUTTON
+\*------------------------------------*/
+button,
+.button {
+  display: inline-block;
+  padding: 0.5em 1em;
+  border: 0.1em solid #76beff;
+  text-align: center;
+  -webkit-border-radius: 0.3em;
+  -moz-border-radius: 0.3em;
+  -ms-border-radius: 0.3em;
+  -o-border-radius: 0.3em;
+  border-radius: 0.3em; }
+
+/*------------------------------------*\
+    #COMMENTS
+\*------------------------------------*/
+/*------------------------------------*\
     #GRID
 \*------------------------------------*/
 /**
  * Simple grid layout based on Snook's idea
  * Source: http://snook.ca/archives/html_and_css/rethinking-the-grid
  */
-.grid {
+.grid, .post--listing {
   display: -ms-Flexbox;
   -ms-box-orient: horizontal;
   display: -webkit-flex;
@@ -598,7 +625,15 @@ html {
   display: -ms-flex;
   display: flex; }
 
-.grid__cell {
+.grid--center, .post--listing {
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center; }
+
+.grid__cell, .post--listing .post__image,
+.post--listing .post__content {
   -webkit-flex: 1;
   -moz-flex: 1;
   -ms-flex: 1;
@@ -633,6 +668,13 @@ html {
   -o-flex: 0 0 20%;
   flex: 0 0 20%; }
 
+.grid__cell--tenth, .post--listing .post__image {
+  -webkit-flex: 0 0 10%;
+  -moz-flex: 0 0 10%;
+  -ms-flex: 0 0 10%;
+  -o-flex: 0 0 10%;
+  flex: 0 0 10%; }
+
 /*------------------------------------*\
     #LAYOUT
 \*------------------------------------*/
@@ -653,11 +695,11 @@ html {
 \*------------------------------------*/
 .list--posts .list__item {
   padding: 1em; }
-.list--posts .list__item-heading,
-.list--posts .list__item-meta {
+.list--posts .list__heading,
+.list--posts .list__meta {
   margin: 0; }
 .list--posts .list__item {
-  border-bottom: 0.1em solid #cbd8e2; }
+  border-bottom: 0.1em solid #e6f1fa; }
 
 /*------------------------------------*\
     #LOGO
@@ -676,12 +718,17 @@ html {
 .logo__title {
   font-size: 1.8em;
   font-family: "Roboto", serif;
-  font-weight: 100; }
+  font-weight: 400; }
 
 .logo__subtitle {
   font-size: 1em;
   font-family: "Roboto Slab", sans-serif;
-  font-weight: 100; }
+  font-weight: 400; }
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  .logo__title,
+  .logo__subtitle {
+    font-weight: 100; } }
 
 .logo--contrast .logo__title {
   color: white; }
@@ -708,6 +755,15 @@ html {
 .nav--contrast .nav__item--current .nav__link {
   color: #ff6969;
   border-bottom-color: #ff6969; }
+
+/*------------------------------------*\
+    #POST
+\*------------------------------------*/
+.post--listing .post__image {
+  margin-right: 1em; }
+.post--listing .post__heading {
+  margin-bottom: 0.33333em;
+  line-height: 1.2; }
 
 /*------------------------------------*\
     #TOUCH
@@ -877,3 +933,13 @@ html {
 .center--horizontal, .logo--main {
   margin-left: auto;
   margin-right: auto; }
+
+.adjust-img {
+  max-width: 100%;
+  height: auto; }
+
+.space--top, .comments, .post__footer {
+  margin-top: 1em; }
+
+.space--bottom {
+  margin-bottom: 1em; }

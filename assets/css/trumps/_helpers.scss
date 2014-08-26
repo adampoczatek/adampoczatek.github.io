@@ -24,3 +24,11 @@
     margin-left: auto;
     margin-right: auto;
 }
+
+.adjust-img {
+    max-width: 100%;
+    height: auto;
+}
+
+.space--top    { margin-top: $base--spacing-unit; }
+.space--bottom { margin-bottom: $base--spacing-unit; }

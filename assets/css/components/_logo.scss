@@ -21,7 +21,7 @@
     font: {
         size: 1.8em;
         family: "Roboto", serif;
-        weight: 100;
+        weight: 400;
     }
 }
 
@@ -29,7 +29,22 @@
     font: {
         size: 1em;
         family: "Roboto Slab", sans-serif;
-        weight: 100;
+        weight: 400;
+    }
+}
+
+.logo__title,
+.logo__subtitle {
+    @media
+    only screen and (-webkit-min-device-pixel-ratio: 2),
+    only screen and (   min--moz-device-pixel-ratio: 2),
+    only screen and (     -o-min-device-pixel-ratio: 2/1),
+    only screen and (        min-device-pixel-ratio: 2),
+    only screen and (                min-resolution: 192dpi),
+    only screen and (                min-resolution: 2dppx) {
+        font: {
+            weight: 100;
+        }
     }
 }
 

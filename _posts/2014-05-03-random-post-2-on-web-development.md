@@ -1,10 +1,11 @@
 ---
 layout: post
-title: Latest post test
+title: Angular.js and Performance Issues
 meta: Post
 category: development
+image: /assets/images/posts/angularjs-logo-300x300.png
 ---
 
-#Ssup
+#Don't get your hopes up, it's a fake post.
 
-post post lolz
+Tesing my new site!
