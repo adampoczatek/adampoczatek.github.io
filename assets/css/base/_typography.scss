@@ -5,19 +5,6 @@
  * Everything related to typography.
  */
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    color: $brand--headings-color;
-    font: {
-        family: "Roboto Slab", sans-serif;
-        weight: 700;
-    }
-}
-
 html {
     color: $brand--text-color;
     font: {
@@ -37,4 +24,18 @@ html {
             weight: 300;
         }
     }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: $brand--headings-color;
+    font: {
+        family: "Roboto Slab", sans-serif;
+        weight: 700;
+    };
+    line-height: 1.2;
 }

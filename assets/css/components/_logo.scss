@@ -7,6 +7,10 @@
     padding: $base--spacing-unit;
 
     text-align: center;
+
+    &:hover {
+        text-decoration: none;
+    }
 }
 
 .logo__title,

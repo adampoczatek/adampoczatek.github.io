@@ -3,16 +3,28 @@
 \*------------------------------------*/
 $brand--color--contrast--1:          #2E353A;
 
-$brand--text--contrast--high: #fff;
-$brand--text--contrast--low: #78898F;
-
 $brand--nav-border-style: .1em solid;
+
+$brand--main-border-style: .1em solid #E6F1FA;
+
+/**
+ * Typography
+ */
 
 $brand--text-color: #78898f;
 $brand--headings-color: #5A6269;
 
 $brand--link-color: #108DFF;
+$brand--link-color--hover: #29A6FF;
 $brand--link-color--contrast: #FAFAD7;
 $brand--link-color-current--contrast: #FF6969;
 
-$brand--main-border-style: .1em solid #E6F1FA;
+$brand--text--contrast--high: #fff;
+$brand--text--contrast--low: #78898F;
+
+/**
+ * Code
+ */
+
+$brand--code-background: #2E353A;
+$brand--code-color: #B8E460;

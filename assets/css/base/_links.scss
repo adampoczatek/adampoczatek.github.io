@@ -3,4 +3,9 @@
 \*------------------------------------*/
 a {
     color: $brand--link-color;
+    font-weight: bolder;
+
+    &:hover {
+        color: $brand--link-color--hover;
+    }
 }

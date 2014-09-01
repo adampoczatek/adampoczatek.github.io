@@ -6,18 +6,18 @@
  * base line-height. This allows us to keep a consistent vertical rhythm.
  * As per: csswizardry.com/2012/06/single-direction-margin-declarations
  */
-h1,h2,h3,h4,h5,h6,
 ul,ol,dl,
 blockquote,p,address,
 table,
 fieldset,figure,
 pre {
-    margin-bottom: $base--spacing-unit / 2;
+    margin-bottom: $base--spacing-unit;
 }
 
 
 h1,h2,h3,h4,h5,h6 {
     margin-top: $base--spacing-unit / 4;
+    margin-bottom: $base--spacing-unit / 2;
 }
 
 /**
