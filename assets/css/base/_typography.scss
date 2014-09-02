@@ -9,19 +9,19 @@ html {
     color: $brand--text-color;
     font: {
         family: "Roboto Slab", sans-serif;
-        weight: 400;
+        weight: 300;
     }
 
     @media
-    only screen and (-webkit-min-device-pixel-ratio: 2),
-    only screen and (   min--moz-device-pixel-ratio: 2),
-    only screen and (     -o-min-device-pixel-ratio: 2/1),
-    only screen and (        min-device-pixel-ratio: 2),
-    only screen and (                min-resolution: 192dpi),
-    only screen and (                min-resolution: 2dppx) {
+    only screen and (min-width: $breakpoint--small) and (-webkit-min-device-pixel-ratio: 2),
+    only screen and (min-width: $breakpoint--small) and (   min--moz-device-pixel-ratio: 2),
+    only screen and (min-width: $breakpoint--small) and (     -o-min-device-pixel-ratio: 2/1),
+    only screen and (min-width: $breakpoint--small) and (        min-device-pixel-ratio: 2),
+    only screen and (min-width: $breakpoint--small) and (                min-resolution: 192dpi),
+    only screen and (min-width: $breakpoint--small) and (                min-resolution: 2dppx) {
 
         font: {
-            weight: 300;
+            weight: 200;
         }
     }
 }
@@ -38,4 +38,9 @@ h6 {
         weight: 700;
     };
     line-height: 1.2;
+}
+
+// Make code blocks slightly smaller
+code[class*="language-"] {
+    font-size: 80%;
 }

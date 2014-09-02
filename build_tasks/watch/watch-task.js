@@ -3,7 +3,7 @@ var watch;
 watch = {
     dist: {
         files: [
-            "<%= cssDir %>/**/*",
+            "./assets/**/*",
             "!<%= cssDir %>/style.css",
             "!<%= cssDir %>/style.min.css"
         ],

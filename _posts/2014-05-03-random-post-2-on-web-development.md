@@ -2,8 +2,9 @@
 layout: post
 title: Angular.js and Performance Issues
 meta: Post
-category: development
-image: /assets/images/posts/angularjs-logo-300x300.png
+categories: [development, angularjs, ideas]
+image: /assets/images/public/angularjs-logo-300x300.gif
+published: false
 ---
 
 #Don't get your hopes up, it's a fake post. Testing my typography settings.
@@ -11,7 +12,7 @@ image: /assets/images/posts/angularjs-logo-300x300.png
 <p class="type--big">Nunc eget ullamcorper nibh, nec tincidunt mauris. Suspendisse a sagittis leo. Nullam id rutrum
 metus. Nunc gravida blandit ligula a tincidunt.</p>
 
-Tesing my new site. This is an example of an paragraph with some [links](#) and also an `inline code` snippet. I'll put
+Tesing my new site. This is an example of an paragraph with some [links](#) and also an <code class="language-javascript">(function() { ... })();</code> snippet. I'll put
 some more `text here` to see how it looks when it goes into two lines. In fact, I'll put even more text as I would like to
 see a bigger block of text!
 
