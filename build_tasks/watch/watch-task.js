@@ -5,7 +5,8 @@ watch = {
         files: [
             "./assets/**/*",
             "!<%= cssDir %>/style.css",
-            "!<%= cssDir %>/style.min.css"
+            "!<%= cssDir %>/style.min.css",
+            "!<%= imgDir %>/public/**/*",
         ],
         tasks: ["build"]
     }

@@ -6,13 +6,28 @@
 
 }
 
-.post__footer {
-    @extend .space--top;
+.post--full {
+
+    .post__heading,
+    .post__content,
+    .post__footer {
+        @extend .box;
+    }
+
+    .post__content {
+        @extend .l--main;
+    }
+
+    .post__heading {
+        text-align: center;
+        border-bottom: $brand--main-border-style;
+    }
 }
 
 .post--listing {
     @extend .grid;
     @extend .grid--center;
+    @extend .l--main;
 
     .post__image,
     .post__content {

@@ -44,6 +44,9 @@
     #BRAND
 \*------------------------------------*/
 /**
+ * Highlights
+ */
+/**
  * Typography
  */
 /**
@@ -638,7 +641,9 @@ code[class*="language-"] {
 /*------------------------------------*\
     #BOX
 \*------------------------------------*/
-.box {
+.box, .post--full .post__heading,
+.post--full .post__content,
+.post--full .post__footer {
   padding: 1em; }
 
 .box--contrast {
@@ -731,7 +736,7 @@ button,
     #LAYOUT
 \*------------------------------------*/
 @media all and (min-width: 28em) {
-  .l--main {
+  .l--main, .post--full .post__content, .post--listing {
     width: 90%;
     max-width: 38em;
     margin-left: auto;
@@ -745,8 +750,8 @@ button,
 .list--posts .list__heading,
 .list--posts .list__meta {
   margin: 0; }
-.list--posts .list__item {
-  border-bottom: 0.1em solid #e6f1fa; }
+.list--posts .list__item + .list__item {
+  border-top: 0.1em solid #e6f1fa; }
 
 /*------------------------------------*\
     #LOGO
@@ -809,10 +814,23 @@ button,
 /*------------------------------------*\
     #POST
 \*------------------------------------*/
+.post--full .post__heading {
+  text-align: center;
+  border-bottom: 0.1em solid #e6f1fa; }
+
 .post--listing .post__image {
   margin-right: 1em; }
 .post--listing .post__heading {
   margin-bottom: 0.33333em; }
+
+/*------------------------------------*\
+    #SITE
+\*------------------------------------*/
+/**
+ * Everything related to the site.
+ */
+.site__footer {
+  border-top: 0.1em solid #e6f1fa; }
 
 /*------------------------------------*\
     #TOUCH
@@ -1106,7 +1124,7 @@ pre[class*="language-"] {
   max-width: 100%;
   height: auto; }
 
-.space--top, .comments, .post__footer {
+.space--top, .comments {
   margin-top: 1em; }
 
 .space--bottom {

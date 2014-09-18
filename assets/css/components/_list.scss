@@ -18,7 +18,7 @@
         margin: 0;
     }
 
-    .list__item {
-        border-bottom: $brand--main-border-style;
+    .list__item + .list__item {
+        border-top: $brand--main-border-style;
     }
 }
