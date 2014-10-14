@@ -4,4 +4,6 @@
 
 .comments {
     @extend .space--top;
+    @extend .l--main;
+    @extend .box;
 }

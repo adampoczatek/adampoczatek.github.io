@@ -641,7 +641,7 @@ code[class*="language-"] {
 /*------------------------------------*\
     #BOX
 \*------------------------------------*/
-.box, .post--full .post__heading,
+.box, .comments, .post--full .post__heading,
 .post--full .post__content,
 .post--full .post__footer {
   padding: 1em; }
@@ -736,7 +736,7 @@ button,
     #LAYOUT
 \*------------------------------------*/
 @media all and (min-width: 28em) {
-  .l--main, .post--full .post__content, .post--listing {
+  .l--main, .comments, .post--full .post__content, .post--listing {
     width: 90%;
     max-width: 38em;
     margin-left: auto;
