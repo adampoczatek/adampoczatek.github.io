@@ -44,3 +44,20 @@ h6 {
 code[class*="language-"] {
     font-size: 80%;
 }
+
+blockquote {
+    font-style: italic;
+    text-align: center;
+
+    p {
+        font-size: 2em;
+        color: lighten($brand--text-color, 30%);
+    }
+}
+
+@media all and (min-width: $breakpoint--small) {
+    blockquote {
+        margin-left: double(-$base--spacing-unit);
+        margin-right: double(-$base--spacing-unit);
+    }
+}

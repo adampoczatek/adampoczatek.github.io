@@ -62,7 +62,7 @@
   text-align: right; }
 
 .type--big {
-  font-size: 1.2em; }
+  font-size: 1.4em; }
 
 /*------------------------------------*\
     #FUNCTIONS
@@ -625,6 +625,17 @@ h6 {
 code[class*="language-"] {
   font-size: 80%; }
 
+blockquote {
+  font-style: italic;
+  text-align: center; }
+  blockquote p {
+    font-size: 2em;
+    color: #ccd2d4; }
+
+@media all and (min-width: 28em) {
+  blockquote {
+    margin-left: -2em;
+    margin-right: -2em; } }
 /*------------------------------------*\
     #COMPONENTS
 \*------------------------------------*/
@@ -817,6 +828,18 @@ button,
 .post--full .post__heading {
   text-align: center;
   border-bottom: 0.1em solid #e6f1fa; }
+.post--full .post__heading--image {
+  padding-top: 10em;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  background-position: center center; }
+  .post--full .post__heading--image .post__title {
+    display: inline-block;
+    padding: 0.5em;
+    background: rgba(255, 255, 255, 0.8); }
+  @media all and (min-width: 28em) {
+    .post--full .post__heading--image {
+      background-size: 100%; } }
 
 .post--listing .post__image {
   margin-right: 1em; }
