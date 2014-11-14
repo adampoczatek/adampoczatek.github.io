@@ -43,13 +43,13 @@
 /*------------------------------------*\
     #BRAND
 \*------------------------------------*/
-/**
+/** 
  * Highlights
  */
 /**
  * Typography
  */
-/**
+/** 
  * Code
  */
 /*------------------------------------*\
@@ -604,7 +604,7 @@ a {
  * Everything related to typography.
  */
 html {
-  color: #78898f;
+  color: #314147;
   font-family: "Roboto Slab", sans-serif;
   font-weight: 300; }
   @media only screen and (min-width: 28em) and (-webkit-min-device-pixel-ratio: 2), only screen and (min-width: 28em) and (min--moz-device-pixel-ratio: 2), only screen and (min-width: 28em) and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-width: 28em) and (min-device-pixel-ratio: 2), only screen and (min-width: 28em) and (min-resolution: 192dpi), only screen and (min-width: 28em) and (min-resolution: 2dppx) {
@@ -617,7 +617,7 @@ h3,
 h4,
 h5,
 h6 {
-  color: #5a6269;
+  color: #202c37;
   font-family: "Roboto Slab", sans-serif;
   font-weight: 700;
   line-height: 1.2; }
@@ -630,7 +630,7 @@ blockquote {
   text-align: center; }
   blockquote p {
     font-size: 2em;
-    color: #ccd2d4; }
+    color: #73929e; }
 
 @media all and (min-width: 28em) {
   blockquote {
@@ -658,7 +658,7 @@ blockquote {
   padding: 1em; }
 
 .box--contrast {
-  background: #2e353a; }
+  background: #131517; }
 
 /*------------------------------------*\
     #BUTTON
@@ -829,14 +829,15 @@ button,
   text-align: center;
   border-bottom: 0.1em solid #e6f1fa; }
 .post--full .post__heading--image {
-  padding-top: 10em;
+  padding-top: 20em;
   background-repeat: no-repeat;
   background-size: auto 100%;
   background-position: center center; }
   .post--full .post__heading--image .post__title {
     display: inline-block;
     padding: 0.5em;
-    background: rgba(255, 255, 255, 0.8); }
+    background: rgba(0, 0, 0, 0.8);
+    color: white; }
   @media all and (min-width: 28em) {
     .post--full .post__heading--image {
       background-size: 100%; } }
@@ -1152,3 +1153,6 @@ pre[class*="language-"] {
 
 .space--bottom {
   margin-bottom: 1em; }
+
+.circle {
+  border-radius: 50em; }

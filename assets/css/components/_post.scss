@@ -20,19 +20,20 @@
 
     .post__heading {
         text-align: center;
-        border-bottom: $brand--main-border-style;
+        border-bottom: $brand--main-border-style; 
     }
 
     .post__heading--image {
-        padding-top: $base--spacing-unit * 10;
-        background-repeat: no-repeat;
+        padding-top: $base--spacing-unit * 20;
+        background-repeat: no-repeat; 
         background-size: auto 100%;
         background-position: center center;
 
         .post__title {
             display: inline-block;
             padding: $base--spacing-unit / 2;
-            background: rgba(255, 255, 255, .8);
+            background: rgba(0, 0, 0, .8);
+            color: $brand--headings-color--inverse;
         }
 
         @media all and (min-width: $breakpoint--small) {

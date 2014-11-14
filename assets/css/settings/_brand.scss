@@ -1,14 +1,14 @@
 /*------------------------------------*\
     #BRAND
 \*------------------------------------*/
-$brand--color--contrast--1:          #2E353A;
+$brand--color--contrast--1:          #131517;
 
 $brand--nav-border-style: .1em solid;
 
 $brand--main-border-style: .1em solid #E6F1FA;
 
 
-/**
+/** 
  * Highlights
  */
 
@@ -18,8 +18,9 @@ $brand--highlight--subtle: #EBFAFF;
  * Typography
  */
 
-$brand--text-color: #78898f;
-$brand--headings-color: #5A6269;
+$brand--text-color: #314147;
+$brand--headings-color: #202C37;
+$brand--headings-color--inverse: #fff;
 
 $brand--link-color: #108DFF;
 $brand--link-color--hover: #29A6FF;
@@ -29,7 +30,7 @@ $brand--link-color-current--contrast: #FF6969;
 $brand--text--contrast--high: #fff;
 $brand--text--contrast--low: #78898F;
 
-/**
+/** 
  * Code
  */
 
