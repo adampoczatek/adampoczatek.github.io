@@ -16,7 +16,7 @@ Within 15 minutes I had a [JSBin prototype](http://jsbin.com/xuxime/2/edit?js) -
 
 ## How It Works
 
-The idea is very simple - every time a user does something you have to register his action along with a relevant rollback function. Those rollbacks and actions then get executed when you call `.undo()` or `.redo()`. 
+The idea is very simple - every time users do something you have to register their actions along with a relevant rollback function. Those rollbacks and actions then get executed when you call `.undo()` or `.redo()`. 
 
 Registering actions is handled by the `.register()` method which accepts two parameters - current action options and the rollback options. Here's an example:
 
