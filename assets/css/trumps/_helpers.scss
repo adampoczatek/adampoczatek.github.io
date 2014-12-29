@@ -30,6 +30,11 @@
     height: auto;
 }
 
+.enhance-img {
+	border: $base--spacing-unit / 2 solid rgba(255, 255, 255, 1);
+	@include vendor(box-shadow, 0 0 $base--spacing-unit rgba(0, 0, 0, .1))
+}
+
 .space--top    { margin-top: $base--spacing-unit; }
 .space--bottom { margin-bottom: $base--spacing-unit; }
 

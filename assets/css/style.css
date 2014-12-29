@@ -496,8 +496,8 @@ pre {
   margin-bottom: 1em; }
 
 h1, h2, h3, h4, h5, h6 {
-  margin-top: 0.25em;
-  margin-bottom: 0.5em; }
+  margin-top: 1.75em;
+  margin-bottom: 1em; }
 
 /**
  * Where `margin-left` is concerned we want to try and indent certain elements
@@ -605,7 +605,7 @@ a {
  */
 html {
   color: #314147;
-  font-family: "Roboto Slab", sans-serif;
+  font-family: sans-serif;
   font-weight: 300; }
   @media only screen and (min-width: 28em) and (-webkit-min-device-pixel-ratio: 2), only screen and (min-width: 28em) and (min--moz-device-pixel-ratio: 2), only screen and (min-width: 28em) and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-width: 28em) and (min-device-pixel-ratio: 2), only screen and (min-width: 28em) and (min-resolution: 192dpi), only screen and (min-width: 28em) and (min-resolution: 2dppx) {
     html {
@@ -630,7 +630,8 @@ blockquote {
   text-align: center; }
   blockquote p {
     font-size: 2em;
-    color: #73929e; }
+    color: #73929e;
+    letter-spacing: -.05em; }
 
 @media all and (min-width: 28em) {
   blockquote {
@@ -845,6 +846,7 @@ button,
 .post--listing .post__image {
   margin-right: 1em; }
 .post--listing .post__heading {
+  margin-top: 0.5em;
   margin-bottom: 0.33333em; }
 
 /*------------------------------------*\
@@ -1147,6 +1149,14 @@ pre[class*="language-"] {
 .adjust-img {
   max-width: 100%;
   height: auto; }
+
+.enhance-img {
+  border: 0.5em solid white;
+  -webkit-box-shadow: 0 0 1em rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 0 1em rgba(0, 0, 0, 0.1);
+  -ms-box-shadow: 0 0 1em rgba(0, 0, 0, 0.1);
+  -o-box-shadow: 0 0 1em rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 1em rgba(0, 0, 0, 0.1); }
 
 .space--top, .comments {
   margin-top: 1em; }
