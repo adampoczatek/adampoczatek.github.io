@@ -74,7 +74,7 @@ We have already received some amazing feedback from our clients.
 
 ## Brand View OnSite
 
-Brand View is an innovating company - they aim to deliver unique products to their customers. [Brand View OnSite](http://www.brandview.com/tour/monitor-pricing-while-browsing/) is a good example of that. I've been asked to design it and Ash Clarke](https://twitter.com/ashclarke)  did a great job coding it. This is what we have created:
+Brand View is an innovating company - they aim to deliver unique products to their customers. [Brand View OnSite](http://www.brandview.com/tour/monitor-pricing-while-browsing/) is a good example of that. I've been asked to design it and Ash Clarke](https://twitter.com/ashclarke)  did a great job coding it. Lastly, [Amit Pore](https://twitter.com/Amit_Pore) handled the back-end development like a boss. This is what we have created:
 
 <a href="/assets/images/public/onsite.jpg" target="_blank">
 	<img src="/assets/images/public/onsite.jpg" class="adjust-img enhance-img" alt="Screenshots of Brand View OnSite" />
