@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Adam Poczatek</title>
+    <meta charset="utf-8">
+    
+    {% if site.environment == 'development' %}
+	<link rel="stylesheet" href="/assets/styles/style.css" />
+	{% else %}
+	<link rel="stylesheet" href="/assets/styles/style.min.css" />
+	{% endif %}
+</head>
+<body>       
+	{{ content }}
+</body>
+</html>

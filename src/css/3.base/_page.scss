@@ -1,0 +1,10 @@
+$test: 11px;
+
+html {
+	font-size: $test;
+}
+
+h1 {
+	color: #333;
+	width: calc(100% - 2em);
+}  

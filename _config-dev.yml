@@ -1,0 +1,6 @@
+markdown: redcarpet
+permalink: /blog/:year/:month/:day/:title/
+exclude:
+- node_modules
+include: ['_scss', '*.scss']
+environment: development
