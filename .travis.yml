@@ -11,7 +11,10 @@ before_install:
 
 script: gulp test
 
+env:
+  global:
+    - secure: JF0E3qZt17OIdfYc/1W86UkvL8cn/dUv4joYjKKG2+U+9xJsl4oTyuePHsxBgQUpfTYRsldjUbx7HaVvCw2jvleJ3KrOExkTF1l9RuRMXiD07VoHmMy/vTY9B2EusrvLq3olSwrzwChWGsIj5aSjD4cbeD/qrBSA/sEqjUQE3Tw=
+    - secure: HJ397qO2QLvdACeTgQXIW6KDtksA4rgat+6goEZUhJzd4HxFaClcIDHVZZbzlVkzJVb1HBTLRNr4tZV+lGIdkwR64wr0RbuGbP3Ga3HPL/ikxD3pCkbEWe7S97EbI19sZEgFD8xd5I9sw8kgpDFMMqmVuFtJ/bwO+ZEnSdHG2UA=
+
 addons:
-  sauce_connect:
-    username: "adampoczatek_github"
-    access_key: "d34362da-ca94-4257-aff1-f4d3fac4272d"
+  sauce_connect: true
