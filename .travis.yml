@@ -1,3 +1,17 @@
-install:
- - npm install
+language: node_js
+
+node_js:
+- "0.12"
+- "0.11"
+- "0.10"
+
+before_install:
+- gem install sass
+- npm install 
+
 script: gulp test
+
+addons:
+  sauce_connect:
+    username: "adampoczatek_github"
+    access_key: "d34362da-ca94-4257-aff1-f4d3fac4272d"
