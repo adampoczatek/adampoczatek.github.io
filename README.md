@@ -1,5 +1,9 @@
 # Adam Poczatek - Personal Site, 2015 
 
+[![Build Status](https://travis-ci.org/adampoczatek/adampoczatek.github.io.svg?branch=newsite)](https://travis-ci.org/adampoczatek/adampoczatek.github.io)
+
+[![Sauce Test Status](https://saucelabs.com/browser-matrix/adampoczatek_github.svg)](https://saucelabs.com/u/adampoczatek_github)
+
 Build on Jekyll and hosted on Github. If you have any suggestions please [open a new issue](https://github.com/adampoczatek/adampoczatek.github.io/issues/new).
 
 ## Installation
@@ -27,8 +31,3 @@ gulp production:preview
 ```   
 
 This task will give you a preview of what the site will look like once it's published. It will bundle all CSS and JS files and serve minified versions without any source maps.
-
-
-[![Build Status](https://travis-ci.org/adampoczatek/adampoczatek.github.io.svg?branch=newsite)](https://travis-ci.org/adampoczatek/adampoczatek.github.io)
-
-[![Sauce Test Status](https://saucelabs.com/browser-matrix/adampoczatek_github.svg)](https://saucelabs.com/u/adampoczatek_github)
