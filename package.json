@@ -4,7 +4,7 @@
   "description": "Adam Poczatek - UX, Visual Design, Front-end Development & Consultancy. Personal Website, 2015",
   "main": "./assets/scripts/main.js",
   "scripts": {
-    "test": "gulp test"
+    "test": "karma start"
   },
   "repository": {
     "type": "git",
