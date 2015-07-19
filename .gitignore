@@ -41,3 +41,4 @@ com_crashlytics_export_strings.xml
 _site
 node_modules
 .sass-cache
+src/temp

@@ -27,17 +27,29 @@
   "homepage": "https://github.com/adampoczatek/adampoczatek.github.io",
   "devDependencies": {
     "browser-sync": "^2.7.13",
+    "browserify": "^9.0.4",
+    "glob": "^5.0.14",
     "gulp": "^3.9.0",
     "gulp-autoprefixer": "^2.3.1",
-    "gulp-html-replace": "^1.5.1",
+    "gulp-babel": "^5.1.0",
+    "gulp-browserify": "^0.5.1",
+    "gulp-concat": "^2.6.0",
     "gulp-load-plugins": "^1.0.0-rc.1",
     "gulp-minify-css": "^1.2.0",
     "gulp-rename": "^1.2.2",
     "gulp-ruby-sass": "^1.0.5",
     "gulp-sass": "^2.0.4",
     "gulp-sourcemaps": "^1.5.2",
+    "gulp-uglify": "^1.2.0",
     "gulp-util": "^3.0.6",
+    "jasmine-core": "^2.3.4",
+    "karma": "^0.13.2",
+    "karma-chrome-launcher": "^0.2.0",
+    "karma-jasmine": "^0.3.6",
+    "path": "^0.11.14",
     "q": "^1.4.1",
-    "run-sequence": "^1.1.1"
-  }
+    "run-sequence": "^1.1.1",
+    "vinyl-transform": "^1.0.0"
+  },
+  "dependencies": {}
 }

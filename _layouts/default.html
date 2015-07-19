@@ -5,13 +5,17 @@
     <title>Adam Poczatek</title>
     <meta charset="utf-8">
     
-    {% if site.environment == 'development' %}
-	<link rel="stylesheet" href="/assets/styles/style.css" />
-	{% else %}
-	<link rel="stylesheet" href="/assets/styles/style.min.css" />
-	{% endif %}
+    
+	<link rel="stylesheet" href="/assets/styles/style{% if site.environment != 'development' %}.min{% endif %}.css" />
+	
 </head>
 <body>       
 	{{ content }}
+
+	<script async type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+	<script async type="text/javascript" src="/assets/js/lib{% if site.environment != 'development' %}.min{% endif %}.js"></script>
+	{% for js in page.customjs %}
+	<script async type="text/javascript" src="{{ js }}{% if site.environment != 'development' %}.min{% endif %}.js"></script>
+	{% endfor %}
 </body>
 </html>
