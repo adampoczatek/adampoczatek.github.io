@@ -10,6 +10,7 @@ var gulp 			= require("gulp"),
 	transform 		= require("vinyl-transform"),
 	browserify		= require("browserify"),
 	glob 			= require("glob"),
+	pngquant		= require("imagemin-pngquant"),
 	karmaServer		= require("karma").Server,
 	plugin 			= gulpPlugins();
 
@@ -17,13 +18,15 @@ gulp.task("default", ["dev", "build:sass", "build:js", "watch:css", "watch:html"
 
 gulp.task("test", function (done) {
 	new karmaServer({
-		configFile:  __dirname + "/karma.conf.js",
+		configFile:  __dirname + "/karma.conf.local.js",
 		singleRun: true
 	}, done).start();
 });
 
 gulp.task("uglify:js", function () {
-	gulp.src("./assets/js/**/*.js")
+	log.info("Minifying JavaScript");
+
+	gulp.src(["./assets/js/**/*.js", "!./assets/js/**/*.min.js"])
 		.pipe(plugin.uglify())
 		.pipe(plugin.rename({
 			extname: ".min.js"	
@@ -32,6 +35,8 @@ gulp.task("uglify:js", function () {
 });
 
 gulp.task("build:babel", function () {
+	log.info("Converting ES2015 to ES5");
+
 	return gulp.src("./src/js/**/*.js")
 		.pipe(plugin.sourcemaps.init())
 		.pipe(plugin.babel({
@@ -42,6 +47,8 @@ gulp.task("build:babel", function () {
 });
 
 gulp.task("build:bundles", function () {
+	log.info("Bundling modules");
+
 	var browserified = transform(function(filename) {
 		var basename = path.basename(filename),
 			expose = "modules/" + basename;
@@ -64,6 +71,8 @@ gulp.task("build:bundles", function () {
 // Build custom scripts.
 gulp.task("build:client", function () {
 	var deferred = Q.defer()
+
+	log.info("Building page-specific JavaScript files");
 
 	// Get a list of all available modules.
 	glob("./src/temp/js/modules/**/*.js", {}, function (err, files) {
@@ -96,12 +105,16 @@ gulp.task("build:client", function () {
 
 // Starts jekyll and browser sync in development environment.
 gulp.task("dev", function () {
+	log.info("Starting Jekyll (Development)");
+
 	start(true);
 });
 
 
 // Starts jekyll and browser sync in production environment.
 gulp.task("prod", function () {
+	log.info("Starting Jekyll (Production)");
+
 	start(false);
 });
 
@@ -109,6 +122,8 @@ gulp.task("prod", function () {
 // Builds css file with sourcemaps and all
 // necessary vendor prefixes.
 gulp.task("build:sass", function () {
+	log.info("Building SASS files");
+
 	return plugin.rubySass("./src/css/style.scss", {
 			sourcemap: true
 		})
@@ -126,6 +141,8 @@ gulp.task("build:sass", function () {
 // This task watches for sass changes and
 // calls `sequence:sass` if something changes.
 gulp.task("watch:css", function () {
+	log.info("Watching CSS...");
+
 	return gulp.watch(["./src/css/**/*.scss"])
 		.on("change", function () {
 			runSequence("build:sass", "jekyll:dev", function () {
@@ -137,18 +154,24 @@ gulp.task("watch:css", function () {
 
 // Builds jekyll in development environment.
 gulp.task("jekyll:dev", function () {
+	log.info("Building Jekyll (Development)");
+
 	return jekyll.buildDev();
 });
 
 
 // Builds jekyll in production environment.
 gulp.task("jekyl:prod", function () {
+	log.info("Building Jekyll (Production)");
+
 	return jekyll.buildProd();
 });
 
 
 // This tasks watches for every .html
 gulp.task("watch:html", function () {
+	log.info("Watching HTML...");
+
 	gulp.watch([
 			"./**/*.html",
 			"!./node_modules",
@@ -164,9 +187,11 @@ gulp.task("watch:html", function () {
 
 // Watch for JS changes.
 gulp.task("watch:js", function () {
-	gulp.watch(["./src/**/*.js", "!./src/test/**/*.js"])
+	log.info("Watching JS...");
+
+	gulp.watch(["./src/js/**/*.js", "!./src/js/test/**/*.js"])
 		.on("change", function () {
-			runSequence("build:js", "jekyll:dev", function () {
+			runSequence("build:js", "jekyll:dev", "test", function () {
 				browserSync.reload();
 			});
 		})	
@@ -176,6 +201,8 @@ gulp.task("watch:js", function () {
 gulp.task("build:js", function () {
 	var deferred = Q.defer();
 
+	log.info("Building all JavaScript files");
+
 	runSequence("build:babel", ["build:bundles", "build:client"], function () {
 		deferred.resolve();
 	});	
@@ -183,18 +210,34 @@ gulp.task("build:js", function () {
 	return deferred.promise;
 });
 
+// Optimise images.
+gulp.task("imagemin", function () {
+	log.info("Optimising images");
+
+	return gulp.src("./src/images/*")
+		.pipe(plugin.imagemin({
+			progressive: true,
+			svgoPlugins: [{ removeViewBox: false }],
+			use: [pngquant()]	
+		}))
+		.pipe(gulp.dest("./assets/images"));
+});
+
+
 // ===== PRODUCTION TASKS =====
 // use these before pushing your changes!
 
 
 // This task is used to compile all necessary
 // files for production.
-gulp.task("production", function () {
-	runSequence("build:sass", "build:js", function () {
+gulp.task("production", function (done) {
+	runSequence("build:sass", "build:js", "uglify:js", "imagemin", function () {
 		gulp.src("./assets/styles/style.css")
 			.pipe(plugin.minifyCss())
 			.pipe(plugin.rename("style.min.css"))
-			.pipe(gulp.dest("./assets/styles"))
+			.pipe(gulp.dest("./assets/styles"));
+
+		done();
 	});
 });
 
@@ -203,8 +246,8 @@ gulp.task("production", function () {
 // it also builds jekyll with `production` flag.
 // The purpose of this task is to see how the website
 // will look like with minified files.
-gulp.task("production:preview", function () {
-	runSequence("production", "prod");
+gulp.task("production:preview", function (done) {
+	runSequence("production", "prod", done);
 });
 
 
@@ -216,6 +259,7 @@ function start (dev) {
 	browserSync.init({
 		proxy: {
 			target: "http://localhost:4000"
-		}
+		},
+		logLevel: "silent"
 	});
 }

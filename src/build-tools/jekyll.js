@@ -6,9 +6,7 @@ module.exports = {
 	start: function (dev) {
 		var deferred = Q.defer(),
 			query = "jekyll serve --no-watch";
-		
-		log.info("Jekyll started.");
-
+			
 		if (dev) {
 			query += " --config=_config.yml,_config-dev.yml";
 		}
@@ -29,8 +27,6 @@ module.exports = {
 	build: function (dev) {
 		var deferred = Q.defer(),
 			query = "jekyll build";
-		
-		log.info("Jekyll rebuild started.");
 
 		if (dev) {
 			query += " --config=_config.yml,_config-dev.yml";

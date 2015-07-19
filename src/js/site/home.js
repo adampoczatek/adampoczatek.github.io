@@ -9,7 +9,7 @@ class Wallet {
 	getCash () {
 		return this.penceToPounds(this.cash);
 	}
-
+ 
 	penceToPounds (amount) {
 		return lib.penceToPounds(amount);
 	} 
@@ -17,8 +17,7 @@ class Wallet {
 
  
 debugger; 
+ 
 
-
-let t = new Wallet(500);
-
-$("body").css("background", "grey");
+  let t = new Wallet('500');
+console.log("Yess, yes!");  
