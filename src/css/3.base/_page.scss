@@ -1,10 +1,8 @@
-$test: 11px;
-
 html {
-	font-size: $test;
-}
+	font-size: ($_base-font-size-mobile / 16px) +em;
+	line-height: 1.5;
 
-h1 {
-	color: #333;
-	width: calc(100% - 2em);
-}  
+	@include _screen-small {
+		font-size: ($_base-font-size / 16px) +em;
+	}
+}

@@ -15,9 +15,20 @@ class Wallet {
 	} 
 }
 
- 
-debugger; 
- 
+let test = (a,b) => {
+	let c = a*b,
+		d;
+
+	{
+		let myPrivVar = c;
+
+		d = myPrivVar / 5 > 5;  
+	}
+
+	return d;
+}
+
+test(4,5); 
 
   let t = new Wallet('500');
-console.log("Yess, yes!");  
+console.log("Yes!");  

@@ -1,0 +1,45 @@
+$icon-build-name: me32ma;
+
+@font-face {
+	font-family: 'Adam-Poczatek';
+	src:url('/assets/fonts/Adam-Poczatek.eot?#{$icon-build-name}');
+	src:url('/assets/fonts/Adam-Poczatek.eot?#iefix#{$icon-build-name}') format('embedded-opentype'),
+		url('/assets/fonts/Adam-Poczatek.ttf?#{$icon-build-name}') format('truetype'),
+		url('/assets/fonts/Adam-Poczatek.woff?#{$icon-build-name}') format('woff'),
+		url('/assets/fonts/Adam-Poczatek.svg?#{$icon-build-name}#Adam-Poczatek') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+.icon {
+	font-family: 'Adam-Poczatek';
+	speak: none;
+	font: {
+		size: 150%;
+		style: normal;
+		weight: normal;
+		variant: normal;
+	};
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon--logo:before {
+	content: "\e600";
+}
+.icon--dribbble:before {
+	content: "\e601";
+}
+.icon--github:before {
+	content: "\e602";
+}
+.icon--linkedin:before {
+	content: "\e603";
+}
+.icon--twitter:before {
+	content: "\e604";
+}
