@@ -7,7 +7,7 @@ before_install:
 - gem install sass
 - npm install 
 
-script: gulp test
+script: karma start
 
 sudo: false
 
