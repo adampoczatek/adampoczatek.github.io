@@ -26,7 +26,7 @@ gulp.task("test", function (done) {
 gulp.task("uglify:js", function () {
 	log.info("Minifying JavaScript");
 
-	gulp.src(["./assets/js/**/*.js", "!./assets/js/**/*.min.js"])
+	return gulp.src(["./assets/js/**/*.js", "!./assets/js/**/*.min.js"])
 		.pipe(plugin.uglify())
 		.pipe(plugin.rename({
 			extname: ".min.js"	
@@ -34,18 +34,26 @@ gulp.task("uglify:js", function () {
 		.pipe(gulp.dest("./assets/js"));
 });
 
+// Convert ES2015  files.
 gulp.task("build:babel", function () {
+	var babelTask = plugin.babel({
+		loose: "all"
+	});
+
 	log.info("Converting ES2015 to ES5");
 
 	return gulp.src("./src/js/**/*.js")
 		.pipe(plugin.sourcemaps.init())
-		.pipe(plugin.babel({
-				loose: "all"
-			}))
+		.pipe(babelTask)
+   		.on("error", function (err) {
+   			log.error(err.stack);
+   			babelTask.end();
+		})
 		.pipe(plugin.sourcemaps.write())
-		.pipe(gulp.dest("./src/temp/js"));	
+		.pipe(gulp.dest("./src/temp/js"));
 });
 
+// Build modules bundle.
 gulp.task("build:bundles", function () {
 	log.info("Bundling modules");
 
@@ -60,7 +68,7 @@ gulp.task("build:bundles", function () {
 		    .bundle();
 	});
 
-	gulp.src(["./src/temp/js/modules/**/*.js"])
+	return gulp.src(["./src/temp/js/modules/**/*.js"])
 		.pipe(plugin.sourcemaps.init())
 		.pipe(browserified)
 		.pipe(plugin.concat("lib.js"))
@@ -69,37 +77,29 @@ gulp.task("build:bundles", function () {
 });
 
 // Build custom scripts.
-gulp.task("build:client", function () {
-	var deferred = Q.defer()
+gulp.task("build:client", function (done) {
+	var modules, browserified, files;
 
 	log.info("Building page-specific JavaScript files");
 
-	// Get a list of all available modules.
-	glob("./src/temp/js/modules/**/*.js", {}, function (err, files) {
-		var modules, browserified;
+	files = glob.sync("./src/temp/js/modules/**/*.js");
 
-		// Create new paths.
-		modules = files.map(function (file) {
-			return "modules/" + path.basename(file);
-		});
-
-		browserified = transform(function (filename) {
-			return browserify(filename, {
-					debug: true
-				})
-				.external(modules)
-				.bundle();
-		});
-
-		gulp.src(["./src/temp/js/site/**/*.js"])
-			.pipe(browserified)
-			.pipe(gulp.dest("./assets/js"));
-
-		deferred.resolve();
+	// Create new paths.
+	modules = files.map(function (file) {
+		return "modules/" + path.basename(file);
 	});
 
+	browserified = transform(function (filename) {
+		return browserify(filename, {
+				debug: true
+			})
+			.external(modules)
+			.bundle();
+	});
 
-	return deferred.promise;
+	return gulp.src(["./src/temp/js/site/**/*.js"])
+		.pipe(browserified)
+		.pipe(gulp.dest("./assets/js"));
 });
 
 
@@ -189,7 +189,7 @@ gulp.task("watch:html", function () {
 gulp.task("watch:js", function () {
 	log.info("Watching JS...");
 
-	gulp.watch(["./src/js/**/*.js", "!./src/js/test/**/*.js"])
+	return gulp.watch(["./src/js/**/*.js", "!./src/js/test/**/*.js"])
 		.on("change", function () {
 			runSequence("build:js", "jekyll:dev", "test", function () {
 				browserSync.reload();
@@ -198,16 +198,10 @@ gulp.task("watch:js", function () {
 });
 
 // Build all javascript files.
-gulp.task("build:js", function () {
-	var deferred = Q.defer();
-
+gulp.task("build:js", function (done) {
 	log.info("Building all JavaScript files");
 
-	runSequence("build:babel", ["build:bundles", "build:client"], function () {
-		deferred.resolve();
-	});	
-
-	return deferred.promise;
+	runSequence("build:babel", "build:bundles", "build:client", done);	
 });
 
 // Optimise images.
@@ -223,6 +217,14 @@ gulp.task("imagemin", function () {
 		.pipe(gulp.dest("./assets/images"));
 });
 
+// Minify CSS
+gulp.task("cssmin", function () {
+	return gulp.src("./assets/styles/style.css")
+		.pipe(plugin.minifyCss())
+		.pipe(plugin.rename("style.min.css"))
+		.pipe(gulp.dest("./assets/styles"));
+});
+
 
 // ===== PRODUCTION TASKS =====
 // use these before pushing your changes!
@@ -231,14 +233,7 @@ gulp.task("imagemin", function () {
 // This task is used to compile all necessary
 // files for production.
 gulp.task("production", function (done) {
-	runSequence("build:sass", "build:js", "uglify:js", "imagemin", function () {
-		gulp.src("./assets/styles/style.css")
-			.pipe(plugin.minifyCss())
-			.pipe(plugin.rename("style.min.css"))
-			.pipe(gulp.dest("./assets/styles"));
-
-		done();
-	});
+	runSequence("build:sass", "build:js", "uglify:js", done);
 });
 
 
