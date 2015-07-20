@@ -233,7 +233,7 @@ gulp.task("cssmin", function () {
 // This task is used to compile all necessary
 // files for production.
 gulp.task("production", function (done) {
-	runSequence("build:sass", "build:js", "uglify:js", "imagemin", done);
+	runSequence("build:sass", "cssmin", "build:js", "uglify:js", "imagemin", done);
 });
 
 

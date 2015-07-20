@@ -9,6 +9,8 @@ before_install:
 
 script: gulp test
 
+sudo: false
+
 env:
   global:
     - secure: JF0E3qZt17OIdfYc/1W86UkvL8cn/dUv4joYjKKG2+U+9xJsl4oTyuePHsxBgQUpfTYRsldjUbx7HaVvCw2jvleJ3KrOExkTF1l9RuRMXiD07VoHmMy/vTY9B2EusrvLq3olSwrzwChWGsIj5aSjD4cbeD/qrBSA/sEqjUQE3Tw=

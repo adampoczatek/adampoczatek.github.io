@@ -4,12 +4,17 @@
 <head>
     <title>Adam Poczatek</title>
     <meta charset="utf-8">
-    
-    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0f1013">
+
 	<link rel="stylesheet" href="/assets/styles/style{% if site.environment != 'development' %}.min{% endif %}.css" />
-	
 </head>
 <body>       
+	<header>
+		<a href="/"><i class="icon icon--logo"></i>	<span class="hide">Adam Poczatek</span></p>
+		{% include site-nav.html %}
+	</header>
+
 	{{ content }}
 
 	<script async type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
