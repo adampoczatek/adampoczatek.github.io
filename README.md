@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/adampoczatek/adampoczatek.github.io.svg?branch=newsite)](https://travis-ci.org/adampoczatek/adampoczatek.github.io)
 
-[![Sauce Test Status](https://saucelabs.com/browser-matrix/adampoczatek_github.svg)](https://saucelabs.com/u/adampoczatek_github)
+[![Sauce Test Status](https://saucelabs.com/browser-matrix/adampoczatek_github.svg?auth=1aa38309bcc03422064195b957b18dc1)](https://saucelabs.com/u/adampoczatek_github)
 
 Build on Jekyll and hosted on Github. If you have any suggestions please [open a new issue](https://github.com/adampoczatek/adampoczatek.github.io/issues/new).
 
