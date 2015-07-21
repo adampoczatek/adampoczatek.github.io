@@ -1,0 +1,66 @@
+/*
+Simple helper for showing/hiding elements.
+
+Modifiers:
+--mb (mobile)
+--sm (small)
+--smo (small only)
+--md (medium)
+--mdo (medium only)
+--lg (large)
+--lgo (large only)
+--xlg (extra large)
+
+Dependencies:
+__screen.scss
+
+Usage:
+<div class="_v--smo">This will only be visible on small screens</div>
+*/
+
+$_visible-name: _v;
+$_hidden-name: _h;
+
+.#{$_visible-name} { display: block; }
+.#{$_hidden-name} { display: none; }
+
+
+@include _screen-mobile {
+    .#{$_visible-name}--mb { display: block; }
+    .#{$_hidden-name}--mb  { display: none; }
+}
+
+@include _screen-small {
+    .#{$_visible-name}--sm { display: block; }
+    .#{$_hidden-name}--sm  { display: none; }
+}
+
+@include _screen-small-only {
+    .#{$_visible-name}--smo { display: block; }
+    .#{$_hidden-name}--smo  { display: none; }
+}
+
+@include _screen-medium {
+    .#{$_visible-name}--md { display: block; }
+    .#{$_hidden-name}--md  { display: none; }
+}
+
+@include _screen-medium-only {
+    .#{$_visible-name}--mdo { display: block; }
+    .#{$_hidden-name}--mdo  { display: none; }
+}
+
+@include _screen-large {
+    .#{$_visible-name}--lg { display: block; }
+    .#{$_hidden-name}--lg  { display: none; }
+}
+
+@include _screen-large-only {
+    .#{$_visible-name}--lgo { display: block; }
+    .#{$_hidden-name}--lgo  { display: none; }
+}
+
+@include _screen-xlarge {
+    .#{$_visible-name}--xlg { display: block; }
+    .#{$_hidden-name}--xlg  { display: none; }
+}

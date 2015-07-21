@@ -1,0 +1,101 @@
+/*
+Mobile navigation menu.
+
+Usage:
+
+* requires
+*/
+
+// Naming
+$mobile-menu-trigger-name:        mobile-menu-trigger;
+$mobile-menu-trigger-name-opened: #{$mobile-menu-trigger-name}--opened;
+$mobile-menu-trigger-icon:        #{$mobile-menu-trigger-name}__icon;
+
+// Sizes
+$mobile-menu-trigger-padding:    .75em;
+$mobile-menu-trigger-width:      1.5em;
+$mobile-menu-trigger-height:     $_base-spacing;
+$mobile-menu-trigger-line-width: 2px;
+
+// Colors
+$mobile-menu-trigger-background:        $color-bg-alt-1;
+$mobile-menu-trigger-background-opened: $color-bg-alt-3;
+
+$mobile-menu-trigger-line-color:        $color-action;
+$mobile-menu-trigger-line-color-opened: $color-text-alt-1;
+
+
+.#{$mobile-menu-trigger-name},
+.#{$mobile-menu-trigger-name} * {
+  box-sizing: content-box !important;
+}
+
+.#{$mobile-menu-trigger-name} {
+  width: $mobile-menu-trigger-width;
+  background: $mobile-menu-trigger-background;
+  padding: $mobile-menu-trigger-padding;
+  border: none;
+  outline: none;
+  text-align: center;
+
+  &,
+  &:active,
+  &:focus,
+  &:hover {
+    background: $mobile-menu-trigger-background;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+  }
+}
+
+.#{$mobile-menu-trigger-icon} {
+  display: block;
+  width: 100%;
+  height: $mobile-menu-trigger-height / 2;
+  position: relative; 
+  margin-top: $mobile-menu-trigger-height / 2;
+  border-top: $mobile-menu-trigger-line-width solid $mobile-menu-trigger-line-color;
+}
+
+.#{$mobile-menu-trigger-icon}:after,
+.#{$mobile-menu-trigger-icon}:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: $mobile-menu-trigger-line-width;
+  left: 0;
+  background: $mobile-menu-trigger-line-color;
+}
+
+.#{$mobile-menu-trigger-icon},
+.#{$mobile-menu-trigger-icon}:after,
+.#{$mobile-menu-trigger-icon}:before {
+  transition: all .25s;
+}
+
+.#{$mobile-menu-trigger-icon}:after {
+  bottom: 0;
+}
+
+.#{$mobile-menu-trigger-icon}:before {
+  top: calc(-#{$mobile-menu-trigger-height} / 2 - #{$mobile-menu-trigger-line-width});
+}
+
+.#{$mobile-menu-trigger-name-opened} {
+
+  .#{$mobile-menu-trigger-icon} {
+    border-color: transparent;
+    
+    &:after,
+    &:before {
+      background: $mobile-menu-trigger-line-color-opened;
+    }
+
+    &:after {
+      transform: translateY(-$mobile-menu-trigger-height / 2) rotate(-45deg);
+    }
+    
+    &:before {
+      transform: translateY($mobile-menu-trigger-height / 2) rotate(45deg);
+    }
+  } 
+}

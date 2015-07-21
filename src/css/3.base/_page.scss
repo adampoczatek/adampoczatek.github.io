@@ -1,8 +1,38 @@
+* {
+    &,
+    &:before,
+    &:after {
+        box-sizing: border-box;
+    }
+}
+
 html {
 	font-size: ($_base-font-size-mobile / 16px) +em;
-	line-height: 1.5;
-
+    font-weight: 300;
+	
 	@include _screen-small {
 		font-size: ($_base-font-size / 16px) +em;
 	}
+
+    @include _screen-small-only {
+        font-weight: 400;
+    }
+
+    @include _screen-medium {
+        font-size: (($_base-font-size + 2px) / 16px) +em;
+    }
+
+    @include _screen-large {
+        font-size: (($_base-font-size + 4px) / 16px) +em;
+    }
+
+    @include _screen-xlarge {
+        font-size: (($_base-font-size + 6px) / 16px) +em;
+    }
 }
+
+body {
+    font-family: "Open Sans", sans-serif;
+    line-height: 1.25;
+    color: $color-text-1;
+} 
