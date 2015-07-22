@@ -12,8 +12,8 @@ $mobile-menu-trigger-name-opened: #{$mobile-menu-trigger-name}--opened;
 $mobile-menu-trigger-icon:        #{$mobile-menu-trigger-name}__icon;
 
 // Sizes
-$mobile-menu-trigger-padding:    .75em;
-$mobile-menu-trigger-width:      1.5em;
+$mobile-menu-trigger-padding:    $_base-spacing;
+$mobile-menu-trigger-width:      $_base-spacing * 2;
 $mobile-menu-trigger-height:     $_base-spacing;
 $mobile-menu-trigger-line-width: 2px;
 

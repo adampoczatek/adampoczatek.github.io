@@ -1,0 +1,108 @@
+.nav {
+
+}
+
+.nav__list {
+
+}
+
+.nav__item {
+
+}
+
+.nav__link {
+    display: block;
+    padding: $_base-spacing;
+    text-transform: uppercase;
+    color: $color-text-1;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+
+    &:active {
+        transform: none;
+    }
+
+    &:after,
+    &:hover:after {
+        height: .15em;
+        background: $color-text-1;
+    }
+}
+
+.nav--alt {
+    .nav__link {
+        color: $color-text-alt-1;
+    }
+}
+
+.nav__link--active,
+.nav--alt .nav__link--active {
+    color: $color-text-alt-2;
+}
+
+.nav__link--special,
+.nav--alt .nav__link--special {
+    color: $color-action;
+
+    &:after {
+        content: none;
+    }
+}
+
+@include _screen-mobile {
+    .nav__link {
+        &:after {
+            transform: scale(1);
+        }
+    }
+}
+
+@include _screen-small {
+    .nav__item + .nav__item {
+        margin-left: $_base-spacing * 2;
+    }
+
+    .nav__link {
+        padding: {
+            left: 0;
+            right: 0;
+        }
+
+        &:after {
+            background: transparent;
+        }
+    }
+
+    .nav__link--active {
+
+        &:after,
+        &:hover:after {
+            background: $color-text-alt-2;
+            transform: scale(1);
+        }
+    }
+
+    .nav__link--special {
+        padding: $_base-spacing;
+        border: .2em solid $color-action;
+        border-radius: .2em;
+
+        &:after {
+            content: none;
+        }
+    }
+
+    .nav--main {
+        text-align: right;
+
+        .nav__item {
+            display: inline-block;
+        }
+    }    
+
+    .nav__link--special {
+        &:hover {
+            color: $color-text-alt-1;
+            background: $color-action;
+        }
+    }
+}

@@ -1,0 +1,8 @@
+.logo {
+    @extend .clean-link;
+    color: $color-text-1;
+}
+
+.logo--medium {
+    font-size: 200%;
+}

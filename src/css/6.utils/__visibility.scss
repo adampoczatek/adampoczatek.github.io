@@ -21,46 +21,46 @@ Usage:
 $_visible-name: _v;
 $_hidden-name: _h;
 
-.#{$_visible-name} { display: block; }
-.#{$_hidden-name} { display: none; }
+.#{$_visible-name} { display: block !important; }
+.#{$_hidden-name} { display: none !important; }
 
 
 @include _screen-mobile {
-    .#{$_visible-name}--mb { display: block; }
-    .#{$_hidden-name}--mb  { display: none; }
+    .#{$_visible-name}--mb { display: block !important; }
+    .#{$_hidden-name}--mb  { display: none !important; }
 }
 
 @include _screen-small {
-    .#{$_visible-name}--sm { display: block; }
-    .#{$_hidden-name}--sm  { display: none; }
+    .#{$_visible-name}--sm { display: block !important; }
+    .#{$_hidden-name}--sm  { display: none !important; }
 }
 
 @include _screen-small-only {
-    .#{$_visible-name}--smo { display: block; }
-    .#{$_hidden-name}--smo  { display: none; }
+    .#{$_visible-name}--smo { display: block !important; }
+    .#{$_hidden-name}--smo  { display: none !important; }
 }
 
 @include _screen-medium {
-    .#{$_visible-name}--md { display: block; }
-    .#{$_hidden-name}--md  { display: none; }
+    .#{$_visible-name}--md { display: block !important; }
+    .#{$_hidden-name}--md  { display: none !important; }
 }
 
 @include _screen-medium-only {
-    .#{$_visible-name}--mdo { display: block; }
-    .#{$_hidden-name}--mdo  { display: none; }
+    .#{$_visible-name}--mdo { display: block !important; }
+    .#{$_hidden-name}--mdo  { display: none !important; }
 }
 
 @include _screen-large {
-    .#{$_visible-name}--lg { display: block; }
-    .#{$_hidden-name}--lg  { display: none; }
+    .#{$_visible-name}--lg { display: block !important; }
+    .#{$_hidden-name}--lg  { display: none !important; }
 }
 
 @include _screen-large-only {
-    .#{$_visible-name}--lgo { display: block; }
-    .#{$_hidden-name}--lgo  { display: none; }
+    .#{$_visible-name}--lgo { display: block !important; }
+    .#{$_hidden-name}--lgo  { display: none !important; }
 }
 
 @include _screen-xlarge {
-    .#{$_visible-name}--xlg { display: block; }
-    .#{$_hidden-name}--xlg  { display: none; }
+    .#{$_visible-name}--xlg { display: block !important; }
+    .#{$_hidden-name}--xlg  { display: none !important; }
 }

@@ -1,0 +1,16 @@
+.clean-link {
+    transition: none;
+
+    &:after {
+        content: none;
+    }
+
+    &:active {
+        transform: none;
+    }
+}
+
+.vertical-middle {
+    transform: translateY(50%);
+    margin-top: -50%;
+}
