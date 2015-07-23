@@ -1,4 +1,10 @@
 <!DOCTYPE html>
+<!-- 
+THIS IS A TEMPORARY WEBSITE!
+New website is currenlty currently being built. You
+can watch the progress on github: 
+https://github.com/adampoczatek/adampoczatek.github.io/tree/newsite
+--> 
 <html>
     <head>
         <title>{{ page.title }}</title>
@@ -6,39 +12,21 @@
         <meta name="viewport" content="width=device-width, minimum-scale=1.0" />
         <meta charset="UTF-8" />
 
-        <link href="http://fonts.googleapis.com/css?family=Roboto:100,400|Roboto+Slab:400,700,100,300" rel="stylesheet" type="text/css" />
-        <link href="/assets/css/style.min.css" rel="stylesheet" />
+        <link href="http://fonts.googleapis.com/css?family=Roboto:100,400,700" rel="stylesheet" type="text/css" />
+        <link href="/assets/css/temp.css" rel="stylesheet" />
         <meta name="google-site-verification" content="gR58eeXKiJ2JpwxfMZQHa6rb6jbHGl4lsvekv2RlIKE" />
     </head>
     <body>
-        <header class="[ box box--contrast ]">
-            <div class="l--main">
-                <a href="/" class="[ logo logo--contrast logo--main ]">
-                    <h1 class="logo__title">Adam Poczatek</h1>
-                    <p class="logo__subtitle">User Interface Developer</p>
-                </a>
-                {% include site-nav.html navclass='nav--main nav--contrast' %}
+        
+        <div class="temp-site">
+            <div class="logo">
+                <i class="icon icon--logo"></i>
             </div>
-        </header>
+            <h1>Adam Poczatek <small>Designer, Developer and Consultant</small></h1>
+            <p class="large">I can help you build any kind of web-based project &mdash; whether it's a small website, e-commerce site or large web application, I am here to help.</p>
 
-        <main>
-        {{ content }}
-        </main>
-
-        <footer class="site__footer">
-            <div class="l--main grid box">
-                <div class="grid__cell grid__cell--third">
-                    <p class="reset">&copy; 2014</p>
-                </div>
-                <div class="grid__cell">
-                    <p class="reset type--right">
-                        <a href="//twitter.com/adampoczatek" class="icon icon--twitter"></a>
-                        <a href="//github.com/adampoczatek" class="icon icon--github"></a>
-                        <a href="//dribbble.com/adampoczatek" class="icon icon--dribbble"></a>
-                    </p>
-                </div>
-            </div>
-        </footer>
+            <p>For any enquiries contact me at <a href="mailto:hello@adamp.co.uk">hello@adamp.co.uk</a> or <a href="tel:+44 7543 920 765">+44 7543 920 765</a></p>
+        </div>
 
         <script>
             // hotjar.com
@@ -62,6 +50,16 @@
 
             ga('create', 'UA-54400872-1', 'auto');
             ga('send', 'pageview');
+
+            (function () {
+                var console = window.console;
+                
+                if (console && typeof console.info === "function") {
+                    console.info("THIS IS A TEMPORARY WEBSITE!");
+                    console.info("New website is currenlty currently being built. You can watch the progress on github:");
+                    console.info("https://github.com/adampoczatek/adampoczatek.github.io/tree/newsite");
+                }
+            })(); 
         </script>
     </body>
 </html>

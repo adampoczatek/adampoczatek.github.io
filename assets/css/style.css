@@ -31,7 +31,7 @@
  * Generic, non-specific variables.
  */
 /**
- * Framework variables. We don’t need to edit these, they’re just handy
+ * Framework variables. We donÔÇÖt need to edit these, theyÔÇÖre just handy
  * variables sourced from other settings.
  */
 /**
@@ -435,7 +435,7 @@ table {
  * As per: csswizardry.com/2011/10/reset-restarted
  */
 /**
- * Let’s make the box model all nice, shall we…?
+ * LetÔÇÖs make the box model all nice, shall weÔÇª?
  */
 *, *:before, *:after {
   -webkit-box-sizing: border-box;
@@ -475,7 +475,7 @@ ins {
   border-bottom: 1px solid; }
 
 /**
- * So that `alt` text is visually offset if images don’t load.
+ * So that `alt` text is visually offset if images donÔÇÖt load.
  */
 img {
   font-style: italic; }
@@ -592,10 +592,10 @@ html {
     #LINKS
 \*------------------------------------*/
 a {
-  color: #108dff;
+  color: #108DFF;
   font-weight: bolder; }
   a:hover {
-    color: #29a6ff; }
+    color: #29A6FF; }
 
 /*------------------------------------*\
     #TYPOGRAPHY
@@ -617,7 +617,7 @@ h3,
 h4,
 h5,
 h6 {
-  color: #202c37;
+  color: #202C37;
   font-family: "Roboto Slab", sans-serif;
   font-weight: 700;
   line-height: 1.2; }
@@ -763,7 +763,7 @@ button,
 .list--posts .list__meta {
   margin: 0; }
 .list--posts .list__item + .list__item {
-  border-top: 0.1em solid #e6f1fa; }
+  border-top: 0.1em solid #E6F1FA; }
 
 /*------------------------------------*\
     #LOGO
@@ -798,9 +798,9 @@ button,
   .logo__subtitle {
     font-weight: 300; } }
 .logo--contrast .logo__title {
-  color: white; }
+  color: #fff; }
 .logo--contrast .logo__subtitle {
-  color: #78898f; }
+  color: #78898F; }
 
 .logo--main {
   display: block; }
@@ -817,18 +817,18 @@ button,
   border-bottom: 0.1em solid; }
 
 .nav--contrast .nav__link {
-  color: #fafad7;
-  border-bottom-color: #fafad7; }
+  color: #FAFAD7;
+  border-bottom-color: #FAFAD7; }
 .nav--contrast .nav__item--current .nav__link {
-  color: #ff6969;
-  border-bottom-color: #ff6969; }
+  color: #FF6969;
+  border-bottom-color: #FF6969; }
 
 /*------------------------------------*\
     #POST
 \*------------------------------------*/
 .post--full .post__heading {
   text-align: center;
-  border-bottom: 0.1em solid #e6f1fa; }
+  border-bottom: 0.1em solid #E6F1FA; }
 .post--full .post__heading--image {
   padding-top: 20em;
   background-repeat: no-repeat;
@@ -838,7 +838,7 @@ button,
     display: inline-block;
     padding: 0.5em;
     background: rgba(0, 0, 0, 0.8);
-    color: white; }
+    color: #fff; }
   @media all and (min-width: 28em) {
     .post--full .post__heading--image {
       background-size: 100%; } }
@@ -856,7 +856,7 @@ button,
  * Everything related to the site.
  */
 .site__footer {
-  border-top: 0.1em solid #e6f1fa; }
+  border-top: 0.1em solid #E6F1FA; }
 
 /*------------------------------------*\
     #TOUCH
@@ -1166,3 +1166,5 @@ pre[class*="language-"] {
 
 .circle {
   border-radius: 50em; }
+
+/*# sourceMappingURL=style.css.map */
