@@ -1,14 +1,8 @@
-.nav {
+.nav { }
 
-}
+.nav__list { }
 
-.nav__list {
-
-}
-
-.nav__item {
-
-}
+.nav__item { }
 
 .nav__link {
     display: block;
@@ -28,19 +22,11 @@
     }
 }
 
-.nav--alt {
-    .nav__link {
-        color: $color-text-alt-1;
-    }
-}
-
-.nav__link--active,
-.nav--alt .nav__link--active {
+.nav__link--active {
     color: $color-text-alt-2;
 }
 
-.nav__link--special,
-.nav--alt .nav__link--special {
+.nav__link--special{
     color: $color-action;
 
     &:after {
@@ -51,14 +37,40 @@
 @include _screen-mobile {
     .nav__link {
         &:after {
-            transform: scale(1);
+            transform-origin: left;
         }
+
+        &:active {
+            color: $color-text-alt-2;
+            transform: translateX(.5em);
+        }
+    }
+
+    .nav--main {
+        background: $color-bg-alt-1;
+
+        .nav__link {
+
+            &:after {
+                transform: scale(1);
+            }
+
+            &:not(.nav__link--special):not(.nav__link--active) {
+                color: $color-text-alt-1;
+            }
+        }
+
     }
 }
 
 @include _screen-small {
-    .nav__item + .nav__item {
-        margin-left: $_base-spacing * 2;
+
+    .nav__item {
+        display: inline-block;
+
+        & + .nav__item {
+            margin-left: $_base-spacing;
+        }
     }
 
     .nav__link {
@@ -67,17 +79,20 @@
             right: 0;
         }
 
-        &:after {
-            background: transparent;
+        &:not(.nav__link--active):active {
+            transform: translateY(.2em);
+
+            &:after {
+                transform: translateY(-.5em);
+            }
         }
     }
 
     .nav__link--active {
-
         &:after,
         &:hover:after {
-            background: $color-text-alt-2;
             transform: scale(1);
+            background: $color-text-alt-2;
         }
     }
 
@@ -85,24 +100,32 @@
         padding: $_base-spacing;
         border: .2em solid $color-action;
         border-radius: .2em;
+        transition: all .2s;
 
         &:after {
             content: none;
         }
-    }
 
-    .nav--main {
-        text-align: right;
-
-        .nav__item {
-            display: inline-block;
-        }
-    }    
-
-    .nav__link--special {
         &:hover {
             color: $color-text-alt-1;
             background: $color-action;
         }
+    }
+
+    .nav--alt {
+
+        .nav__link:not(.nav__link--special):not(.nav__link--active) {
+            color: $color-text-alt-1;
+
+            &:after {
+                background: $color-text-alt-1;
+            }
+        }
+    }
+}
+
+@include _screen-medium {
+    .nav__item + .nav__item {
+        margin-left: $_base-spacing * 2;
     }
 }

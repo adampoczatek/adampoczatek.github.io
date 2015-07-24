@@ -1,0 +1,49 @@
+.section {
+    overflow: hidden;
+    padding: $_base-spacing;
+}
+
+.section--ux {
+    background: $color-bg-alt-1;
+}
+
+@include _screen-small {
+    .section {
+        padding: 0 $page-padding-small;
+    }
+
+    .section--full,
+    .section__content {
+        min-height: 100vh;
+    }
+
+    .section__content--large {
+        font-size: 220%;
+    }
+
+    .section__content {
+        max-width: 70%;
+        position: relative
+    }
+
+    .section--image {
+        background-position: right bottom;
+        background-repeat: no-repeat;
+        background-size: auto 80%;
+    }
+
+    .section--about {
+        background-image: url(/assets/images/craig.jpg);
+    }
+
+    .section--ux {
+        background: $color-bg-alt-1;
+    }
+}
+
+
+@include _screen-large {
+    .section__content {
+        max-width: 60%;
+    }
+}

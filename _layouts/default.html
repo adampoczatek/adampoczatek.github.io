@@ -12,9 +12,9 @@
 </head>
 <body>       
 	{% include site-header.html %}
- 
+    
 	{{ content }}
-
+  
 	<script async type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 	<script async type="text/javascript" src="/assets/js/lib{% if site.environment != 'development' %}.min{% endif %}.js"></script>
 	{% for js in page.customjs %}

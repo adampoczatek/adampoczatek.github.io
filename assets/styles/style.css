@@ -463,6 +463,21 @@ th {
   .cf:after {
     clear: both; }
 
+button {
+  padding: 1em;
+  color: #f7266e;
+  font-size: 60%;
+  font-weight: 700;
+  text-transform: uppercase;
+  border: 0.2em solid #f7266e;
+  background: transparent;
+  border-radius: .2em;
+  -webkit-transition: all .2s;
+          transition: all .2s; }
+  button:hover {
+    color: #fff;
+    background: #f7266e; }
+
 a {
   font-weight: 600;
   text-decoration: none;
@@ -479,9 +494,8 @@ a {
     height: 2px;
     content: "";
     background: #f7266e;
-    -webkit-transform: scale(0);
-        -ms-transform: scale(0);
-            transform: scale(0);
+    -webkit-transform: scale(0) translate3d(0, 0, 0);
+            transform: scale(0) translate3d(0, 0, 0);
     -webkit-transition: all .1s;
             transition: all .1s; }
   a:hover:after {
@@ -535,6 +549,10 @@ h2,
 h3 {
   margin-bottom: .25em;
   letter-spacing: -2px; }
+
+p {
+  line-height: 1.2;
+  margin-bottom: 1em; }
 
 /*
 Simple, responsive grid system.
@@ -1062,123 +1080,180 @@ Usage:
     height: .15em;
     background: #2b2b2b; }
 
-.nav--alt .nav__link {
-  color: #fff; }
-
-.nav__link--active,
-.nav--alt .nav__link--active {
+.nav__link--active {
   color: #63656c; }
 
-.nav__link--special,
-.nav--alt .nav__link--special {
+.nav__link--special {
   color: #f7266e; }
-  .nav__link--special:after,
-  .nav--alt .nav__link--special:after {
+  .nav__link--special:after {
     content: none; }
 
 @media screen and (max-width: 36em) {
   .nav__link:after {
-    -webkit-transform: scale(1);
-        -ms-transform: scale(1);
-            transform: scale(1); } }
+    -webkit-transform-origin: left;
+        -ms-transform-origin: left;
+            transform-origin: left; }
+  .nav__link:active {
+    color: #63656c;
+    -webkit-transform: translateX(0.5em);
+        -ms-transform: translateX(0.5em);
+            transform: translateX(0.5em); }
+
+  .nav--main {
+    background: #16171a; }
+    .nav--main .nav__link:after {
+      -webkit-transform: scale(1);
+          -ms-transform: scale(1);
+              transform: scale(1); }
+    .nav--main .nav__link:not(.nav__link--special):not(.nav__link--active) {
+      color: #fff; } }
 @media screen and (min-width: 36em) {
-  .nav__item + .nav__item {
-    margin-left: 2em; }
+  .nav__item {
+    display: inline-block; }
+    .nav__item + .nav__item {
+      margin-left: 1em; }
 
   .nav__link {
     padding-left: 0;
     padding-right: 0; }
-    .nav__link:after {
-      background: transparent; }
+    .nav__link:not(.nav__link--active):active {
+      -webkit-transform: translateY(0.2em);
+          -ms-transform: translateY(0.2em);
+              transform: translateY(0.2em); }
+      .nav__link:not(.nav__link--active):active:after {
+        -webkit-transform: translateY(-0.5em);
+            -ms-transform: translateY(-0.5em);
+                transform: translateY(-0.5em); }
 
   .nav__link--active:after, .nav__link--active:hover:after {
-    background: #63656c;
     -webkit-transform: scale(1);
         -ms-transform: scale(1);
-            transform: scale(1); }
+            transform: scale(1);
+    background: #63656c; }
 
   .nav__link--special {
     padding: 1em;
     border: 0.2em solid #f7266e;
-    border-radius: .2em; }
+    border-radius: .2em;
+    -webkit-transition: all .2s;
+            transition: all .2s; }
     .nav__link--special:after {
       content: none; }
+    .nav__link--special:hover {
+      color: #fff;
+      background: #f7266e; }
 
-  .nav--main {
-    text-align: right; }
-    .nav--main .nav__item {
-      display: inline-block; }
+  .nav--alt .nav__link:not(.nav__link--special):not(.nav__link--active) {
+    color: #fff; }
+    .nav--alt .nav__link:not(.nav__link--special):not(.nav__link--active):after {
+      background: #fff; } }
+@media screen and (min-width: 60em) {
+  .nav__item + .nav__item {
+    margin-left: 2em; } }
+.section {
+  overflow: hidden;
+  padding: 1em; }
 
-  .nav__link--special:hover {
-    color: #fff;
-    background: #f7266e; } }
+.section--ux {
+  background: #16171a; }
+
+@media screen and (min-width: 36em) {
+  .section {
+    padding: 0 5%; }
+
+  .section--full,
+  .section__content {
+    min-height: 100vh; }
+
+  .section__content--large {
+    font-size: 220%; }
+
+  .section__content {
+    max-width: 70%;
+    position: relative; }
+
+  .section--image {
+    background-position: right bottom;
+    background-repeat: no-repeat;
+    background-size: auto 80%; }
+
+  .section--about {
+    background-image: url(/assets/images/craig.jpg); }
+
+  .section--ux {
+    background: #16171a; } }
+@media screen and (min-width: 92em) {
+  .section__content {
+    max-width: 60%; } }
 .site-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 99999; }
-  .site-header .mobile-menu-trigger {
-    display: none; }
+  position: relative;
+  z-index: 1; }
+
+.site-header__menu-trigger {
+  float: right; }
 
 @media screen and (max-width: 36em) {
-  body {
-    padding-top: 15%; }
-
   .site-header {
-    background: #16171a;
     -webkit-perspective: 500px;
             perspective: 500px; }
-    .site-header .logo {
-      position: absolute;
-      top: 0;
-      left: .5em;
-      font-size: 1.5em;
-      -webkit-tap-highlight-color: transparent; }
-      .site-header .logo .icon {
-        -webkit-transform: translateY(50%);
-            -ms-transform: translateY(50%);
-                transform: translateY(50%);
-        margin-top: -50%;
-        display: inline-block;
-        color: #fff; }
-    .site-header .mobile-menu-trigger {
-      display: block;
-      float: right; }
-    .site-header .nav {
-      position: absolute;
-      top: 100%;
-      left: 0;
-      right: 0;
-      opacity: 0;
-      background: #16171a;
-      -webkit-transform: scale(0);
-          -ms-transform: scale(0);
-              transform: scale(0);
-      -webkit-transform-origin: 100% 0;
-          -ms-transform-origin: 100% 0;
-              transform-origin: 100% 0;
-      -webkit-transition: all 0.3s cubic-bezier(0, 0.8, 0.1, 1.09);
-              transition: all 0.3s cubic-bezier(0, 0.8, 0.1, 1.09); }
-      .site-header .nav .nav__link {
-        color: #fff; }
-      .site-header .nav .nav__link--active {
-        color: #63656c; }
-      .site-header .nav .nav__link--special {
-        color: #f7266e; }
-    .site-header .nav--expanded {
-      display: block;
-      opacity: 1;
-      -webkit-transform: scale(1);
-          -ms-transform: scale(1);
-              transform: scale(1); } }
-@media screen and (min-width: 36em) {
-  body {
-    padding-top: 7em; }
 
+  .site-header__logo {
+    padding: 1em; }
+
+  .site-header__menu-wrapper {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden; }
+
+  .site-header__menu-trigger {
+    display: block;
+    float: right; }
+
+  .site-header__menu {
+    position: absolute;
+    top: 100%;
+    left: 20%;
+    right: 0;
+    z-index: 10000;
+    opacity: 0;
+    background: #16171a;
+    padding: 1em;
+    border: .2em solid #fff;
+    -webkit-transform: scale(0) translate3d(0, 0, 0);
+            transform: scale(0) translate3d(0, 0, 0);
+    -webkit-transform-origin: 100% 0;
+        -ms-transform-origin: 100% 0;
+            transform-origin: 100% 0;
+    -webkit-transition: all 0.3s cubic-bezier(0, 0.8, 0.1, 1.09);
+            transition: all 0.3s cubic-bezier(0, 0.8, 0.1, 1.09); }
+
+  .site-header__menu--expanded {
+    opacity: 1;
+    -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+            transform: scale(1); } }
+@media screen and (min-width: 36em) {
   .site-header {
-    padding: 2em;
-    height: 7em; } }
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: #fff;
+    padding: 2em 5%; }
+
+  .site-header--shadow {
+    box-shadow: 0 0 10em rgba(0, 0, 0, 0.2); }
+
+  .site-header__menu {
+    text-align: right; } }
+@media screen and (min-width: 92em) {
+  .site-header__logo {
+    font-size: 1.2em; } }
 /*
 Helpers for adding space.
 Naming convention is quite straighforward:
@@ -2118,10 +2193,25 @@ Usage:
             transform: none; }
 
 .vertical-middle {
-  -webkit-transform: translateY(50%);
-      -ms-transform: translateY(50%);
-          transform: translateY(50%);
-  margin-top: -50%; }
+  position: absolute;
+  z-index: 0;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  top: 50%;
+  left: 0; }
+
+@media screen and (min-width: 36em) {
+  .vertical-middle--sm {
+    position: absolute;
+    z-index: 0;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+    top: 50%;
+    left: 0; } }
+.type-clear-top {
+  margin-top: 0; }
 
 
 

@@ -46,7 +46,7 @@ var test = function test(a, b) {
 
 test(4, 5);
 
-var t = new Wallet("500");
+var t = new Wallet('500');
 console.log("Yes!");
 
 },{"modules/moduleOne.js":"modules/moduleOne.js","modules/moneyCalculator.js":"modules/moneyCalculator.js"}]},{},[1])

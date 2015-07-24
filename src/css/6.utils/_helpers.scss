@@ -11,6 +11,19 @@
 }
 
 .vertical-middle {
-    transform: translateY(50%);
-    margin-top: -50%;
+    position: absolute;
+    z-index: 0;
+    transform: translateY(-50%);
+    top: 50%;
+    left: 0;
+}
+
+@include _screen-small {
+    .vertical-middle--sm {
+        position: absolute;
+        z-index: 0;
+        transform: translateY(-50%);
+        top: 50%;
+        left: 0;
+    }
 }

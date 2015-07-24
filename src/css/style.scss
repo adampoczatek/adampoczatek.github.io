@@ -2,12 +2,14 @@
 "1.settings/_base",
 "1.settings/_screen",
 "1.settings/color",
+"1.settings/globals",
 
 "2.tools/_screen",
 
 "3.base/_reset",
 "3.base/_normalize",
 "3.base/_clearfix",
+"3.base/buttons",
 "3.base/links",
 "3.base/page",
 "3.base/typography",
@@ -18,9 +20,11 @@
 "4.components/logo",
 "4.components/mobile-menu-trigger",
 "4.components/nav",
+"4.components/section",
 
 "5.modules/site-header",
 
 "6.utils/_spacing",
 "6.utils/_visibility",
-"6.utils/helpers";
+"6.utils/helpers",
+"6.utils/type";

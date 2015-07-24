@@ -1,0 +1,16 @@
+button {
+    padding: $_base-spacing;
+    color: $color-action;
+    font-size: 60%;
+    font-weight: 700;
+    text-transform: uppercase;
+    border: .2em solid $color-action;
+    background: transparent;
+    border-radius: .2em;
+    transition: all .2s;
+
+    &:hover {
+        color: $color-text-alt-1;
+        background: $color-action;
+    }
+}
