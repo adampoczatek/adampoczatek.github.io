@@ -1,4 +1,4 @@
-<header class="site-header">
+<header id="site-header" class="site-header">
     <div class="_g site-header__contents">
 
         <div class="_g__12 _g__4--sm">
@@ -13,11 +13,11 @@
         <div class="_g__12 _g__20--sm">
 
             <div class="site-header__menu-wrapper">
-                <span class="mobile-menu-trigger _v--mb site-header__menu-trigger" style="display: none;" onclick="this.classList.toggle('mobile-menu-trigger--opened'); document.querySelector('.nav--main').classList.toggle('site-header__menu--expanded')">
+                <span class="mobile-menu-trigger _v--mb site-header__menu-trigger" style="display: none;" id="nav-trigger">
                     <span class="mobile-menu-trigger__icon"></span>
                 </span>
 
-                <nav class="nav nav--main site-header__menu">
+                <nav id="nav" class="nav nav--main site-header__menu">
                     <ul class="nav__list">
                         <li class="_v--mb nav__item" style="display: none;">
                             <a href="/" class="nav__link {% if page.url == '/index.html' %}nav__link--active{% endif %}">Home</a>
@@ -32,7 +32,7 @@
                             <a href="/front-end-development/" class="nav__link {% if page.url == '/front-end-development/' %}nav__link--active{% endif %}">Front-end</a>
                         </li>
                         <li class="nav__item">
-                            <a href="#" class="nav__link nav__link--special">Hire Me</a>
+                            <a href="" class="nav__link nav__link--special hire-me-trigger">Hire Me</a>
                         </li>
                     </ul>
                 </nav>

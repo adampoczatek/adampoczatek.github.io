@@ -41,7 +41,6 @@
         opacity: 0;
         background: $color-bg-alt-1;
         padding: $_base-spacing;
-        border: .2em solid #fff;
         transform: scale(0) translate3d(0, 0, 0);
         transform-origin: 100% 0;
         transition: all .3s cubic-bezier(0, 0.8, 0.1, 1.09);
@@ -62,10 +61,26 @@
         z-index: 1000;
         background: $color-bg-1;
         padding: $_base-spacing * 2 $page-padding-small;
+        transition: all .2s;
+
+        .logo {
+            transition: all .2s;
+        }
     }
 
-    .site-header--shadow {
-        box-shadow: 0 0 10em rgba(0,0,0,.2)
+    .site-header--alt {
+        background: $color-bg-alt-1;
+    }
+
+    .site-header--alt2 {
+        background: $color-bg-alt-2;
+    }
+
+    .site-header--alt,
+    .site-header--alt2 {
+        .logo {
+            color: $color-text-alt-1;
+        }
     }
 
     .site-header__menu {

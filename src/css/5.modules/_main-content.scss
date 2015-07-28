@@ -1,0 +1,9 @@
+@include _screen-mobile {
+    .main-content {
+        transition: all .2s;
+    }
+
+    .main-content--opened {
+        opacity: .8;
+    }
+}

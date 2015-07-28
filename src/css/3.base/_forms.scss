@@ -1,0 +1,33 @@
+label {
+    text-transform: uppercase;
+    font-weight: 700;
+    display: block;
+    margin-bottom: $_base-spacing / 2;
+}
+
+input,
+textarea {
+    padding: $_base-spacing;
+    border: 0;
+    transition: all .2s;
+    outline: none;
+
+    &::placeholder {
+        font-style: italic;    
+    }
+}
+
+.alt {
+    input,
+    textarea {
+        background: $color-input-alt;
+
+        &::placeholder {
+            color: $color-input-placeholder-alt;
+        }
+
+        &:focus {
+            background: $color-input-focus-alt;
+        }
+    }
+} 

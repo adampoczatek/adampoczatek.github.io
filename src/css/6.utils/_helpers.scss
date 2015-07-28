@@ -18,6 +18,14 @@
     left: 0;
 }
 
+.stretch {
+    width: 100%;
+}
+
+@include _screen-mobile {
+    .stretch--mb { width: 100%; }
+}
+
 @include _screen-small {
     .vertical-middle--sm {
         position: absolute;
@@ -26,4 +34,6 @@
         top: 50%;
         left: 0;
     }
+
+    .stretch--sm { width: 100%; }
 }

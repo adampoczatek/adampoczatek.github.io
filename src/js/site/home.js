@@ -1,34 +1,80 @@
-import * as lib from "modules/moneyCalculator.js";
-import * as m1 from "modules/moduleOne.js";
+const SECTION_1 = 1;
+const SECTION_2 = 2;
+const SECTION_3 = 3;
 
-class Wallet {
-	constructor(cash) {
-		this.cash = cash;
-	}
+var isScrolling = false,
+	currentSectionId = null,
+	section1 = document.getElementById("section-1"),
+	section2 = document.getElementById("section-2"),
+	section3 = document.getElementById("section-3"),
+	header = document.getElementById("site-header"),
+	nav = document.getElementById("nav"),
+	section1Position = section1.offsetTop,
+	section2Position = section2.offsetTop,
+	section3Position = section3.offsetTop,
+	headerHeight = header.offsetHeight;
 
-	getCash () {
-		return this.penceToPounds(this.cash);
+
+// Listen for scroll event.
+window.addEventListener("scroll", setScroll, false);
+
+// Update cached variables.
+window.addEventListener("resize", updateCachedValues, false);
+
+window.setInterval(function () {
+	if (isScrolling) {
+		isScrolling = false;
+
+		let headerBottomPosition = window.scrollY + headerHeight;
+
+		// Touches section 2
+		if (headerBottomPosition >= section2Position && 
+			headerBottomPosition < section3Position) {
+
+			updateHeader(SECTION_2);
+		}
+		// Touches section 3
+		else if (headerBottomPosition >= section3Position) {
+			updateHeader(SECTION_3);
+		}
+		// Else, it's section 1
+		else {
+			updateHeader(SECTION_1);
+		}
 	}
- 
-	penceToPounds (amount) {
-		return lib.penceToPounds(amount);
-	} 
+}, 100);
+
+function setScroll () {
+	isScrolling = true;
 }
 
-let test = (a,b) => {
-	let c = a*b,
-		d;
-
-	{
-		let myPrivVar = c;
-
-		d = myPrivVar / 5 > 5;  
-	}
-
-	return d;
+function updateCachedValues () {
+	section1Position = section1.offsetTop,
+	section2Position = section2.offsetTop,
+	section3Position = section3.offsetTop,
+	headerHeight = header.offsetHeight;
 }
 
-test(4,5); 
+function updateHeader (sectionId) {
+	if (currentSectionId === sectionId) {
+		return;
+	}
 
-  let t = new Wallet('500');
-console.log("Yes!");  
+	currentSectionId = sectionId;
+
+	if (sectionId === SECTION_2) {
+		nav.classList.add("nav--alt");
+		header.classList.add("site-header--alt");
+		header.classList.remove("site-header--alt2");
+	}
+	else if (sectionId === SECTION_3) {
+		nav.classList.add("nav--alt");
+		header.classList.add("site-header--alt2");
+		header.classList.remove("site-header--alt");
+	}
+	else {
+		nav.classList.remove("nav--alt");
+		header.classList.remove("site-header--alt");
+		header.classList.remove("site-header--alt2");
+	}
+}

@@ -1,0 +1,45 @@
+// Body class
+.modal--active {
+    overflow: hidden;
+
+    > *:not(.modal) {
+        display: none;
+    }
+}
+
+.modal {
+    display: none;
+}
+
+.modal--visible {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: $color-bg-alt-1;
+    display: block;
+    z-index: 1000;
+    overflow-y: scroll;
+}
+
+.modal__close {
+    position: absolute;
+    top: $_base-spacing;
+    right: $_base-spacing;
+    z-index: 1;
+}
+
+.modal__content {}
+
+@include _screen-small {
+    .modal__close {
+        top: $_base-spacing * 2;
+        right: 5%;
+    }
+
+    .modal__content--narrow {
+        max-width: 60%;
+        margin-left: 10%;
+    }
+}

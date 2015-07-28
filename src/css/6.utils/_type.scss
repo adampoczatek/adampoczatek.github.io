@@ -1,3 +1,54 @@
+
+.type-alt {
+    color: $color-text-alt-1;
+}
+
+.type-alt2 {
+    color: $color-text-alt-2;
+}
+
+.type-center {
+    text-align: center;
+}
+
+.type-intro {
+    font-size: 125%;
+    font-weight: 700;
+    margin-bottom: .75em;
+}
+
+// Font sizes
+.type-smaller { font-size: 80%; }
+.type-large   { font-size: 150%; }
+.type-xlarge  { font-size: 220%; }
+.type-larger  { font-size: 125%; }
+
 .type-clear-top {
     margin-top: 0;
+}
+
+.type-clear-bottom {
+    margin-bottom: 0;
+}
+
+
+@include _screen-mobile {
+    .type-smaller--mb { font-size: 80%; }
+}
+
+@include _screen-small {
+    .type-intro {
+        font-size: 150%;
+    }
+
+    .type-smaller--sm { font-size: 80%; }
+    .type-large--sm   { font-size: 150%; }
+    .type-xlarge--sm  { font-size: 220%; }
+    .type-larger--sm  { font-size: 125%; }
+
+    .type-intro--sm {
+        font-size: 150%;
+        font-weight: 700;
+        margin-bottom: .75em;
+    }
 }

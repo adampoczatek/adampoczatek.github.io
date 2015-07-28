@@ -13,10 +13,26 @@
 <body>       
 	{% include site-header.html %}
     
-	{{ content }}
+    <div class="main-content" id="content">
+    	{{ content }}
+
+        <footer class="site-footer">
+            <div class="site-footer__content type-center type-alt2">
+                <p class="type-larger">For any enquiries contact me at <a href="mailto:hello@adamp.co.uk">hello@adamp.co.uk</a> or on <a href="tel:+447543920765">+44 7543 920 765</a></p>
+                <p>
+                    <a href="https://twitter.com/adampoczatek"><i class="icon icon--twitter"></i></a>
+                    <a class="_s-l" href="https://dribbble.com/adamp"><i class="icon icon--dribbble"></i></a>
+                    <a class="_s-l" href="https://github.com/adampoczatek"><i class="icon icon--github"></i></a>
+                    <a class="_s-l" href="https://uk.linkedin.com/pub/adam-poczatek/46/115/112"><i class="icon icon--linkedin"></i></a>
+                </p>
+            </div>
+        </footer>
+    </div>
+
+    {% include hire-me-modal.html %}
   
-	<script async type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 	<script async type="text/javascript" src="/assets/js/lib{% if site.environment != 'development' %}.min{% endif %}.js"></script>
+	<script async type="text/javascript" src="/assets/js/global{% if site.environment != 'development' %}.min{% endif %}.js"></script>
 	{% for js in page.customjs %}
 	<script async type="text/javascript" src="{{ js }}{% if site.environment != 'development' %}.min{% endif %}.js"></script>
 	{% endfor %}

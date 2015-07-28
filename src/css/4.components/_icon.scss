@@ -1,4 +1,4 @@
-$icon-build-name: me32ma;
+$icon-build-name: wfk209;
 
 @font-face {
 	font-family: 'Adam-Poczatek';
@@ -28,6 +28,9 @@ $icon-build-name: me32ma;
 	-moz-osx-font-smoothing: grayscale;
 }
 
+.icon--close:before {
+	content: "\e605";
+}
 .icon--logo:before {
 	content: "\e600";
 }

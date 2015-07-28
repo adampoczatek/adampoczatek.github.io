@@ -7,6 +7,10 @@ h6,
 b,
 strong {
     font-weight: 700;
+
+    a {
+        font-weight: 700;
+    }
 }
 
 h1,
@@ -16,7 +20,16 @@ h3 {
     letter-spacing: -2px;
 }
 
+
 p {
-    line-height: 1.2;
+    line-height: 1.5;
     margin-bottom: 1em;
+}
+
+.alt {
+    color: $color-text-alt-1;
+}
+
+@include _screen-small {
+    h1 { font-size: 3em; }
 }

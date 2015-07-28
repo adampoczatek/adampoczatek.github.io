@@ -1,24 +1,23 @@
 .section {
-    overflow: hidden;
     padding: $_base-spacing;
+    position: relative;
 }
 
-.section--ux {
-    background: $color-bg-alt-1;
-}
+.section--alt   { background: $color-bg-alt-1; }
+.section--alt2  { background: $color-bg-alt-2; }
 
 @include _screen-small {
     .section {
         padding: 0 $page-padding-small;
     }
+    
+    .section--image { background-repeat: no-repeat; }
+    .section--ux    { background-image: url(/assets/images/wireframe.png); }
+    .section--fed   { background-image: url(/assets/images/laptop.png); }
 
     .section--full,
     .section__content {
         min-height: 100vh;
-    }
-
-    .section__content--large {
-        font-size: 220%;
     }
 
     .section__content {
@@ -26,24 +25,30 @@
         position: relative
     }
 
-    .section--image {
+    .section--about { background-image: url(/assets/images/craig.jpg); }
+
+    .section--about {
         background-position: right bottom;
-        background-repeat: no-repeat;
         background-size: auto 80%;
     }
 
-    .section--about {
-        background-image: url(/assets/images/craig.jpg);
-    }
-
     .section--ux {
-        background: $color-bg-alt-1;
+        background-position: 97.5% 60%;
+        background-size: 30% auto;
+    }
+    
+    .section--fed {
+        background-position: right bottom;
+        background-size: auto 75%;
     }
 }
-
 
 @include _screen-large {
     .section__content {
         max-width: 60%;
+    }
+
+    .section--ux {
+        background-size: 30% auto;
     }
 }

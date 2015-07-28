@@ -220,7 +220,9 @@ gulp.task("imagemin", function () {
 // Minify CSS
 gulp.task("cssmin", function () {
 	return gulp.src("./assets/styles/style.css")
-		.pipe(plugin.minifyCss())
+		.pipe(plugin.minifyCss({
+			advanced: false	
+		}))
 		.pipe(plugin.rename("style.min.css"))
 		.pipe(gulp.dest("./assets/styles"));
 });
