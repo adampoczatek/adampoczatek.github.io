@@ -7,7 +7,7 @@ var gulp 			= require("gulp"),
 	jekyll			= require("./src/build-tools/jekyll"),
 	path			= require("path"),
 	Q 				= require("q"),
-	transform 		= require("vinyl-transform"),
+	through2		= require("through2"),
 	browserify		= require("browserify"),
 	glob 			= require("glob"),
 	pngquant		= require("imagemin-pngquant"),
@@ -42,7 +42,7 @@ gulp.task("build:babel", function () {
 
 	log.info("Converting ES2015 to ES5");
 
-	return gulp.src("./src/js/**/*.js")
+	return gulp.src(["./src/js/**/*.js", "!./src/js/tests/**/*.js"])
 		.pipe(plugin.sourcemaps.init())
 		.pipe(babelTask)
    		.on("error", function (err) {
@@ -57,23 +57,24 @@ gulp.task("build:babel", function () {
 gulp.task("build:bundles", function () {
 	log.info("Bundling modules");
 
-	var browserified = transform(function(filename) {
-		var basename = path.basename(filename),
-			expose = "modules/" + basename;
-
-		return browserify(filename, {
-				debug: true
-			})
-			.require(filename, { expose: expose })
-		    .bundle();
-	});
-
 	return gulp.src(["./src/temp/js/modules/**/*.js"])
 		.pipe(plugin.sourcemaps.init())
-		.pipe(browserified)
+		.pipe(through2.obj(function (file, enc, next) {
+			var filename = file.path,
+				basename = path.basename(filename),
+				expose = "modules/" + basename;
+
+			browserify(filename, { debug: true })
+				.require(filename, { expose: expose })
+				.bundle(function(err, res){
+                    // assumes file.contents is a Buffer
+                    file.contents = res;
+                    next(null, file);
+                });
+		}))
 		.pipe(plugin.concat("lib.js"))
 		.pipe(plugin.sourcemaps.write())
-		.pipe(gulp.dest("./assets/js"))
+		.pipe(gulp.dest("./assets/js"));
 });
 
 // Build custom scripts.
@@ -89,16 +90,20 @@ gulp.task("build:client", function (done) {
 		return "modules/" + path.basename(file);
 	});
 
-	browserified = transform(function (filename) {
-		return browserify(filename, {
-				debug: true
-			})
-			.external(modules)
-			.bundle();
-	});
-
 	return gulp.src(["./src/temp/js/site/**/*.js"])
-		.pipe(browserified)
+		.pipe(through2.obj(function (file, enc, next) {
+			var filename = file.path,
+				basename = path.basename(filename),
+				expose = "modules/" + basename;
+
+			browserify(filename, { debug: true })
+				.external(modules)
+				.bundle(function(err, res){
+                    // assumes file.contents is a Buffer
+                    file.contents = res;
+                    next(null, file);
+                });
+		}))
 		.pipe(gulp.dest("./assets/js"));
 });
 
