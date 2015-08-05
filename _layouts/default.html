@@ -30,7 +30,10 @@
     </div>
 
     {% include hire-me-modal.html %}
-  
+    <!--[if lte IE 9]>
+    <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/classlist/2014.01.31/classList.min.js"></script>
+    <![endif]-->
+
 	<script async type="text/javascript" src="/assets/js/lib{% if site.environment != 'development' %}.min{% endif %}.js"></script>
 	<script async type="text/javascript" src="/assets/js/global{% if site.environment != 'development' %}.min{% endif %}.js"></script>
 	{% for js in page.customjs %}
