@@ -1,6 +1,7 @@
 .section {
     padding: $_base-spacing;
     position: relative;
+    overflow: hidden;
 }
 
 .section--alt   { background: $color-bg-alt-1; }
@@ -9,8 +10,50 @@
 @include _screen-small {
     .section {
         padding: 0 $page-padding-small;
+
+        &:before,
+        &:after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            width: 51%;
+            height: 100em;
+        }
+
+        &:before {
+            right: 50%;
+            transform-origin: 100% 0;
+            transform: rotate(4deg);
+        }
+
+        &:after {
+            left: 50%;
+            transform-origin: 0 0;
+            transform: rotate(-4deg);
+        }
     }
     
+    .section--about {
+        &:after,
+        &:before {
+            background-color: $color-bg-alt-1;
+        }
+    }
+
+    .section--ux {
+        &:after,
+        &:before {
+            background-color: $color-bg-alt-2;
+        }
+    }
+
+    .section--fed {
+        &:after,
+        &:before {
+            background-color: $color-bg-alt-3;
+        }
+    }
+
     .section--image { background-repeat: no-repeat; }
     .section--ux    { background-image: url(/assets/images/wireframe.png); }
     .section--fed   { background-image: url(/assets/images/laptop.png); }
@@ -33,13 +76,13 @@
     }
 
     .section--ux {
-        background-position: 97.5% 60%;
+        background-position: 97.5% 58.5%;
         background-size: 30% auto;
     }
     
     .section--fed {
         background-position: right bottom;
-        background-size: auto 75%;
+        background-size: auto 70%;
     }
 }
 

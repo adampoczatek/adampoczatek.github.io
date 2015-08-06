@@ -1247,7 +1247,8 @@ Usage:
     margin-left: 2em; } }
 .section {
   padding: 1em;
-  position: relative; }
+  position: relative;
+  overflow: hidden; }
 
 .section--alt {
   background: #16171a; }
@@ -1258,6 +1259,37 @@ Usage:
 @media screen and (min-width: 45em) {
   .section {
     padding: 0 5%; }
+    .section:before, .section:after {
+      content: "";
+      position: absolute;
+      top: 100%;
+      width: 51%;
+      height: 100em; }
+    .section:before {
+      right: 50%;
+      -webkit-transform-origin: 100% 0;
+          -ms-transform-origin: 100% 0;
+              transform-origin: 100% 0;
+      -webkit-transform: rotate(4deg);
+          -ms-transform: rotate(4deg);
+              transform: rotate(4deg); }
+    .section:after {
+      left: 50%;
+      -webkit-transform-origin: 0 0;
+          -ms-transform-origin: 0 0;
+              transform-origin: 0 0;
+      -webkit-transform: rotate(-4deg);
+          -ms-transform: rotate(-4deg);
+              transform: rotate(-4deg); }
+
+  .section--about:after, .section--about:before {
+    background-color: #16171a; }
+
+  .section--ux:after, .section--ux:before {
+    background-color: #121316; }
+
+  .section--fed:after, .section--fed:before {
+    background-color: #0f1013; }
 
   .section--image {
     background-repeat: no-repeat; }
@@ -1284,12 +1316,12 @@ Usage:
     background-size: auto 80%; }
 
   .section--ux {
-    background-position: 97.5% 60%;
+    background-position: 97.5% 58.5%;
     background-size: 30% auto; }
 
   .section--fed {
     background-position: right bottom;
-    background-size: auto 75%; } }
+    background-size: auto 70%; } }
 @media screen and (min-width: 92em) {
   .section__content {
     max-width: 60%; }
@@ -1305,7 +1337,7 @@ Usage:
     opacity: .8; } }
 .site-footer,
 .site-footer__content {
-  padding: 1em; }
+  padding: 2em; }
 
 .site-footer {
   background: #0f1013;
