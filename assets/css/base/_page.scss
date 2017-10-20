@@ -1,0 +1,27 @@
+/*------------------------------------*\
+    #PAGE
+\*------------------------------------*/
+/**
+ * Page-level styling, e.g. `html` and `body` elements, etc.
+ */
+
+
+/**
+ * 1. One off bits of maths to get our base font size in ems.
+ */
+html {
+    font-size: ($base--font-size / 16px) +em; /* [1] */
+    line-height: $base--line-height; /* [1] */
+
+    @if $show-baseline-grid == true {
+
+        $baseline-size: strip-units($base--spacing-unit);
+
+        background-image: url(http://basehold.it/i/#{$baseline-size});
+    }
+
+    @media all and (min-width: $breakpoint--medium) {
+        font-size: 1.2em;
+    }
+}
+

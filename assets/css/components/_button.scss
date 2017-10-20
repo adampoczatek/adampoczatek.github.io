@@ -1,0 +1,15 @@
+/*------------------------------------*\
+    #BUTTON
+\*------------------------------------*/
+
+button,
+.button {
+    display: inline-block;
+    padding: $base--spacing-unit / 2 $base--spacing-unit;
+
+    border: .1em solid lighten($brand--link-color, 20%);
+
+    text-align: center;
+
+    @include vendor(border-radius, .3em);
+}

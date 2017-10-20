@@ -1,0 +1,24 @@
+/*------------------------------------*\
+    #LIST
+\*------------------------------------*/
+
+.list {}
+
+// .list--posts
+
+.list--posts {
+    @extend .reset;
+
+    .list__item {
+        padding: $base--spacing-unit;
+    }
+
+    .list__heading,
+    .list__meta {
+        margin: 0;
+    }
+
+    .list__item + .list__item {
+        border-top: $brand--main-border-style;
+    }
+}
