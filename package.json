@@ -1,8 +1,8 @@
 {
   "name": "adaz.github.io",
-  "version": "0.0.1",
-  "description": "Blog for UI Developers and Designers",
-  "main": "_site/index.html",
+  "version": "2.0.0",
+  "description": "Web Dev & Design Blog",
+  "main": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -23,14 +23,7 @@
   "bugs": {
     "url": "https://github.com/adaz/adaz.github.io/issues"
   },
-  "homepage": "https://github.com/adaz/adaz.github.io",
+  "homepage": "https://adamp.co.uk",
   "devDependencies": {
-    "grunt": "~0.4.5",
-    "grunt-cli": "~0.1.13",
-    "grunt-contrib-sass": "~0.8.1",
-    "grunt-contrib-cssmin": "~0.10.0",
-    "matchdep": "~0.3.0",
-    "grunt-contrib-watch": "~0.6.1",
-    "grunt-contrib-imagemin": "~0.8.1"
   }
 }
