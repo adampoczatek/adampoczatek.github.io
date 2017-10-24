@@ -7,7 +7,7 @@ const isProdPreview = () => process.env.NODE_ENV === 'production-preview';
 const config = {
   context: resolve('src'),
   entry: {
-    main: ['./main.js']
+    main: ['./js/main.js'],
   },
   output: {
     path: resolve('dist/js'),
