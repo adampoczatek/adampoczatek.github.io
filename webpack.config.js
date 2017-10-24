@@ -1,8 +1,7 @@
 const webpack = require('webpack');
-const { path, resolve } = require('path');
+const { resolve } = require('path');
 
 const isProd = () => process.env.NODE_ENV === 'production';
-const isProdPreview = () => process.env.NODE_ENV === 'production-preview';
 
 const config = {
   context: resolve('src'),
@@ -42,27 +41,18 @@ const config = {
   ],
 };
 
-if (isProd() || isProdPreview()) {
-  config.plugins.push(new webpack.DefinePlugin({
-    'process.env': {
-      NODE_ENV: '"production"',
-    },
-  }));
-}
-
 if (isProd()) {
-  config.plugins.push(new webpack.optimize.UglifyJsPlugin({
-    compress: true,
-    sourceMap: false,
-  }));
-}
-
-if (isProdPreview()) {
-  config.devtool = 'source-map';
-  config.plugins.push(new webpack.optimize.UglifyJsPlugin({
-    compress: true,
-    sourceMap: true,
-  }));
+  config.plugins.push(
+    new webpack.DefinePlugin({
+      'process.env': {
+        NODE_ENV: '"production"',
+      },
+    }),
+    new webpack.optimize.UglifyJsPlugin({
+      compress: true,
+      sourceMap: false,
+    }),
+  );
 }
 
 module.exports = config;
