@@ -5,7 +5,7 @@
   "main": "",
   "scripts": {
     "test": "./node_modules/.bin/mocha --require babel-polyfill --require babel-register ./src/**/*.test.js",
-    "start": "./node_modules/.bin/concurrently \"npm run build:css:watch\" \"npm run build:js:watch\" \"npm test -- --watch\" \"npm run dev:assets\" \"npm run dev:library\"",
+    "start": "./node_modules/.bin/concurrently \"npm run build:css:watch\" \"npm run build:js:watch\" \"npm test -- --watch\" \"npm run dev:assets\"",
     "build:css": "./node_modules/.bin/copyfiles -u 2 src/css/**/* ./dist/css",
     "build:css:watch": "./node_modules/.bin/onchange \"src/**/*.css\" -- npm run build:css",
     "build:js": "./node_modules/.bin/webpack",
