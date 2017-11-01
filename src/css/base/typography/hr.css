@@ -1,0 +1,4 @@
+hr {
+  margin-top: var(--global-spacing-regular);
+  margin-bottom: var(--global-spacing-regular);
+}

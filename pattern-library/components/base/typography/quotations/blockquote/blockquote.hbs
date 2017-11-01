@@ -1,3 +1,7 @@
 <blockquote>
-  <p>{{ quote }}</p>
+  <p>{{ quote }}</p>{{#if author}}
+  <footer>
+    {{ author }}{{#if cite}}, <cite>{{ cite }}</cite>{{/if}}
+  </footer>
+  {{/if}}
 </blockquote>

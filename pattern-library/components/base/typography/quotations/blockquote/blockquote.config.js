@@ -6,5 +6,7 @@ module.exports = {
   order: 1,
   context: {
     quote: faker.lorem.paragraph(),
+    author: faker.name.findName(),
+    cite: faker.company.companyName(),
   }
 };

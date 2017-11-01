@@ -1,0 +1,55 @@
+blockquote {
+  clear: both;
+  margin: var(--global-spacing-regular) 0;
+  padding: 1em;
+  padding: var(--global-spacing-regular);
+  background: rgba(0, 0, 0, 0.05);
+}
+
+@media all and (min-width: 1000px) {
+  blockquote {
+    margin: var(--global-spacing-large);
+    padding: 2em;
+    padding: var(--global-spacing-regular) var(--global-spacing-large);
+  }
+}
+
+blockquote p {
+  font-family: Baskerville, Georgia, serif;
+  font-size: 1.25rem;
+  font-style: normal;
+  letter-spacing: 0.005em;
+  word-spacing: 0.25em;
+}
+
+blockquote p::before {
+  margin-right: 0.5rem;
+}
+
+blockquote p::after {
+  content: close-quote;
+}
+
+blockquote p::after {
+  margin-left: 0.5rem;
+}
+
+blockquote footer {
+  font-style: normal;
+}
+
+blockquote footer::before {
+  content: '— ';
+}
+
+q::before {
+  content: open-quote;
+  margin-left: 0.25rem;
+  margin-right: 0.1rem;
+}
+
+q::after {
+  content: close-quote;
+  margin-left: 0.1rem;
+  margin-right: 0.25rem;
+}

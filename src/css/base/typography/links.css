@@ -1,0 +1,25 @@
+a {
+  color: var(--global-colors-action);
+  font-weight: 800;
+  text-decoration-skip: ink;
+}
+
+a:visited {
+  color: var(--global-colors-action-visited);
+  opacity: 0.5;
+}
+
+a:focus {
+  outline: 0.05rem solid var(--global-colors-action-focus);
+  outline-offset: 0.25rem;
+}
+
+a:hover {
+  color: var(--global-colors-action-hover);
+}
+
+a:active {
+  color: var(--global-colors-action-active);
+  text-decoration-style: double;
+  outline: none;
+}
