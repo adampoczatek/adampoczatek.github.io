@@ -12,12 +12,13 @@
   --global-spacing-max: 3.5rem;
 
   /* Global: Colors */
-  --global-colors-error: red;
+  --global-colors-error: crimson;
   --global-colors-action: blue;
-  --global-colors-action-hover: #0051FF;
-  --global-colors-action-active: #4343FF;
+  --global-colors-action-hover: mediumblue;
+  --global-colors-action-active: tomato;
   --global-colors-action-focus: blue;
-  --global-colors-action-visited: darkblue;
+  --global-colors-action-visited: darkmagenta;
+  --global-colors-alternative: turquoise;
 }
 
 @media all and (min-width: 1000px) {

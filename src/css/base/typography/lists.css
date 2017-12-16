@@ -4,9 +4,10 @@ ol:first-child {
 }
 
 ul,
-ol {
-  margin-bottom: var(--global-spacing-regular);
+ol,
+dl {
   margin-top: var(--global-spacing-regular);
+  margin-bottom: var(--global-spacing-regular);
 }
 
 ul,
@@ -26,4 +27,8 @@ ul li + li {
 
 ol li + li {
   margin-top: var(--global-spacing-small);
+}
+
+dt {
+  font-weight: 200;
 }

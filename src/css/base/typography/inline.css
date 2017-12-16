@@ -5,8 +5,21 @@ ins {
 }
 
 em {
-  word-spacing: 0.075em;
-  letter-spacing: 0.025em;
+  word-spacing: 0.25rem;
+  letter-spacing: 0.075rem;
+}
+
+em strong,
+strong em {
+  font-size: 1.25rem;
+  font-weight: 400;
+}
+
+@media all and (min-width: 1020px) {
+  em strong,
+  strong em {
+    font-size: 1.5rem;
+  }
 }
 
 ins {

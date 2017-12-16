@@ -1,24 +1,24 @@
-.float-left,
-.float-right {
+.content--left,
+.content--right {
   display: block;
   width: 100%;
   margin-bottom: 1rem;
 }
 
 @media all and (min-width: 420px) {
-  .float-left,
-  .float-right {
+  .content--left,
+  .content--right {
     display: inline-block;
     width: auto;
     max-width: 50%;
   }
 
-  .float-left {
+  .content--left {
     float: left;
     margin: 0.3rem 1rem 1rem 0;
   }
 
-  .float-right {
+  .content--right {
     float: right;
     margin: 0.3rem 0 1rem 1rem;
   }

@@ -10,7 +10,7 @@ a:visited {
 }
 
 a:focus {
-  outline: 0.05rem solid var(--global-colors-action-focus);
+  outline: 0.05rem solid;
   outline-offset: 0.25rem;
 }
 
@@ -20,6 +20,5 @@ a:hover {
 
 a:active {
   color: var(--global-colors-action-active);
-  text-decoration-style: double;
   outline: none;
 }

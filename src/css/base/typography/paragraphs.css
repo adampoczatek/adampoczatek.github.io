@@ -5,4 +5,5 @@ p:first-child {
 p {
   margin-bottom: var(--global-spacing-regular);
   margin-top: var(--global-spacing-regular);
+  text-align: justify;
 }
