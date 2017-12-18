@@ -2,11 +2,11 @@ module.exports = {
   label: 'Text',
   name: 'input-text',
   order: 1,
-  default: 'label-first',
+  default: 'default',
   variants: [
     {
-      label: 'Label Before Input',
-      name: 'label-first',
+      label: 'Default',
+      name: 'default',
       order: 1,
       context: {
         style: {
@@ -26,55 +26,13 @@ module.exports = {
       },
     },
     {
-      label: 'Label After Input',
-      name: 'label-last',
+      label: 'Inline',
+      name: 'inline',
       order: 2,
-      context: {
-        style: {
-          labelTop: false,
-          labelBottom: true,
-          wrap: false,
-        },
-        type: 'text',
-        label: 'First name',
-        placeholder: 'Enter your first name...',
-        value: 'Adam',
-        id: 'first-name',
-        classes: {
-          input: '',
-          label: '',
-        },
-      },
-    },
-    {
-      label: 'Label Around (Before)',
-      name: 'label-around-before',
-      order: 3,
       context: {
         style: {
           labelTop: true,
           labelBottom: false,
-          wrap: true,
-        },
-        type: 'text',
-        label: 'First name',
-        placeholder: 'Enter your first name...',
-        value: 'Adam',
-        id: 'first-name',
-        classes: {
-          input: '',
-          label: '',
-        },
-      },
-    },
-    {
-      label: 'Label Around (After)',
-      name: 'label-around-after',
-      order: 4,
-      context: {
-        style: {
-          labelTop: false,
-          labelBottom: true,
           wrap: true,
         },
         type: 'text',
@@ -117,7 +75,7 @@ module.exports = {
         style: {
           labelTop: true,
           labelBottom: false,
-          wrap: true,
+          wrap: false,
         },
         type: 'text',
         label: 'First name',

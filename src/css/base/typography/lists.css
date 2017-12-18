@@ -30,5 +30,9 @@ ol li + li {
 }
 
 dt {
-  font-weight: 200;
+  font-weight: 600;
+}
+
+dd + dt {
+  margin-top: var(--global-spacing-small);
 }

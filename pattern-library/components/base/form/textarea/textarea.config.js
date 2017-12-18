@@ -2,11 +2,11 @@ module.exports = {
   label: 'Textarea',
   name: 'input-textarea',
   order: 1,
-  default: 'label-first',
+  default: 'default',
   variants: [
     {
-      label: 'Label Before Input',
-      name: 'label-first',
+      label: 'Default',
+      name: 'default',
       order: 1,
       context: {
         style: {
@@ -26,13 +26,13 @@ module.exports = {
       },
     },
     {
-      label: 'Label After Input',
-      name: 'label-last',
+      label: 'Disabled',
+      name: 'disabled',
       order: 2,
       context: {
         style: {
-          labelTop: false,
-          labelBottom: true,
+          labelTop: true,
+          labelBottom: false,
           wrap: false,
         },
         textarea: true,
@@ -40,48 +40,7 @@ module.exports = {
         placeholder: 'Enter your first name...',
         value: 'Adam',
         id: 'first-name',
-        classes: {
-          input: '',
-          label: '',
-        },
-      },
-    },
-    {
-      label: 'Label Around (Before)',
-      name: 'label-around-before',
-      order: 3,
-      context: {
-        style: {
-          labelTop: true,
-          labelBottom: false,
-          wrap: true,
-        },
-        type: 'text',
-        label: 'First name',
-        placeholder: 'Enter your first name...',
-        value: 'Adam',
-        id: 'first-name',
-        classes: {
-          input: '',
-          label: '',
-        },
-      },
-    },
-    {
-      label: 'Label Around (After)',
-      name: 'label-around-after',
-      order: 4,
-      context: {
-        style: {
-          labelTop: false,
-          labelBottom: true,
-          wrap: true,
-        },
-        textarea: true,
-        label: 'First name',
-        placeholder: 'Enter your first name...',
-        value: 'Adam',
-        id: 'first-name',
+        disabled: true,
         classes: {
           input: '',
           label: '',
@@ -91,7 +50,7 @@ module.exports = {
     {
       label: 'No Label',
       name: 'no-label',
-      order: 5,
+      order: 3,
       context: {
         style: {
           labelTop: false,

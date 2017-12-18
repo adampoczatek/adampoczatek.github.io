@@ -1,0 +1,24 @@
+.dropdown {
+  display: inline-block;
+}
+
+.dropdown__list {
+  position: relative;
+}
+
+.dropdown__list::after {
+  content: '\25BE';
+  position: absolute;
+  top: 50%;
+  right: calc(var(--global-spacing-large) / 2);
+  width: 15px;
+  height: 10px;
+  line-height: 10px;
+  transform: translate(50%, -50%);
+  pointer-events: none;
+}
+
+.dropdown__options {
+  padding-right: var(--global-spacing-large);
+  min-width: 100%;
+}
