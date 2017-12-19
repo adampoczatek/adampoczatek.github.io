@@ -10,3 +10,8 @@ html {
   letter-spacing: -0.01em;
   hyphens: auto;
 }
+
+::selection {
+  color: white;
+  background: var(--global-colors-action-hover);
+}
