@@ -1,6 +1,7 @@
 label {
   position: relative;
   display: block;
+  margin-bottom: 1em;
   margin-bottom: var(--global-spacing-regular);
 }
 
