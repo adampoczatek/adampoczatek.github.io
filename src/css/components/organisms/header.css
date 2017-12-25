@@ -33,6 +33,7 @@
 
 .header__toggler-icon {
   margin-left: var(--global-spacing-small);
+  transition: all 0.3s;
 }
 
 .header__toggler:active .header__toggler-icon g {
@@ -64,6 +65,13 @@
   text-align: center;
 }
 
+.header__link:focus,
+.header__link:hover {
+  background-color: var(--global-colors-action);
+  color: white;
+  outline: none;
+}
+
 .header__link:active,
 .header__link--active,
 .header__link--active:active,
@@ -71,13 +79,6 @@
 .header__link--active:visited {
   background-color: var(--global-colors-action-active);
   color: white;
-}
-
-.header__link:focus,
-.header__link:hover {
-  background-color: var(--global-colors-action);
-  color: white;
-  outline: none;
 }
 
 @media all and (min-width: 600px) {

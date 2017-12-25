@@ -6,7 +6,7 @@ const isProd = () => process.env.NODE_ENV === 'production';
 const config = {
   context: resolve('src'),
   entry: {
-    main: ['./js/main.js'],
+    global: ['./js/global'],
   },
   output: {
     path: resolve('dist/js'),
@@ -36,7 +36,7 @@ const config = {
   },
   plugins: [
     new webpack.optimize.CommonsChunkPlugin({
-      name: 'main',
+      name: 'global',
     }),
   ],
 };

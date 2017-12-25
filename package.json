@@ -4,7 +4,7 @@
   "description": "Web Dev & Design Blog",
   "main": "",
   "scripts": {
-    "test": "./node_modules/.bin/mocha --require babel-polyfill --require babel-register ./src/**/*.test.js",
+    "test": "./node_modules/.bin/mocha --recursive --require babel-polyfill --require babel-register \"./src/**/*.spec.js\"",
     "start": "./node_modules/.bin/concurrently \"npm run build:css:watch\" \"npm run lint:css:watch\" \"npm run build:js:watch\" \"npm run lint:js:watch\" \"npm test -- --watch\" \"npm run dev:assets\"",
     "build:css": "./node_modules/.bin/copyfiles -u 2 \"src/css/**/*.css\" ./dist/css",
     "build:css:watch": "./node_modules/.bin/onchange \"src/**/*.css\" -- npm run build:css",
@@ -48,6 +48,7 @@
     "babel-polyfill": "^6.26.0",
     "babel-preset-env": "^1.6.1",
     "babel-register": "^6.26.0",
+    "chai": "^4.1.2",
     "concurrently": "^3.5.0",
     "copyfiles": "^1.2.0",
     "cross-env": "^5.1.0",
@@ -55,6 +56,7 @@
     "eslint-config-airbnb-base": "^12.1.0",
     "eslint-plugin-import": "^2.8.0",
     "faker": "^4.1.0",
+    "jsdom": "^11.5.1",
     "mocha": "^4.0.1",
     "onchange": "^3.2.1",
     "serve": "^6.3.1",
@@ -63,6 +65,7 @@
     "webpack": "^3.8.1"
   },
   "dependencies": {
-    "babel-runtime": "^6.26.0"
+    "babel-runtime": "^6.26.0",
+    "domready": "^1.0.8"
   }
 }
