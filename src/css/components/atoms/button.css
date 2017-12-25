@@ -20,6 +20,14 @@ button + button {
   margin-left: var(--global-spacing-small);
 }
 
+.button--primary {
+  background-color: var(--global-colors-action);
+}
+
+.button--primary:hover {
+  background-color: var(--global-colors-action-hover);
+}
+
 .button:hover,
 button:hover,
 .button:visited {
@@ -40,14 +48,6 @@ button:active {
 .button:active:focus,
 button:active:focus {
   outline: 0.05rem solid var(--global-colors-action-active);
-}
-
-.button--primary {
-  background-color: var(--global-colors-action);
-}
-
-.button--primary:hover {
-  background-color: var(--global-colors-action-hover);
 }
 
 .button:disabled,
