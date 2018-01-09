@@ -10,7 +10,7 @@
   }
 }
 
-@media all and (min-width: 1000px) {
+@media all and (min-width: 1020px) {
   .grid {
     display: -webkit-box;
     display: -webkit-flex;

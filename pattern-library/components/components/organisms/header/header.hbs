@@ -1,4 +1,4 @@
-<header class="header{{#if classes}} {{classes}}{{/if}}">
+<header class="header{{#if classes}} {{classes}}{{/if}} js-header">
   <div class="header__main">
     <a href="#" class="header__logo">
       <?xml version="1.0" encoding="UTF-8"?>
@@ -11,10 +11,10 @@
         </g>
       </svg>
     </a>
-    <a href="#" class="header__toggler">
-      <span class="header__toggler-label">{{ menuLabel }}</span>
+    <a href="#" class="header__toggler js-header-toggler">
+      <span class="header__toggler-label js-header-toggler-label">{{ menuLabel }}</span>
       <?xml version="1.0" encoding="UTF-8"?>
-      <svg class="header__toggler-icon{{#if menuOpened}} header__toggler-icon--active{{/if}}" width="13px" height="8px" viewBox="0 0 13 8" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <svg class="header__toggler-icon{{#if menuOpened}} header__toggler-icon--active{{/if}} js-header-toggler-icon" width="13px" height="8px" viewBox="0 0 13 8" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
         <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-346.000000, -18.000000)">
           <g id="Menu" transform="translate(300.000000, 13.000000)" fill="#0000FF">
             <polygon id="Dropdown" points="52.363961 9.89949494 57.3137085 4.94974747 58.7279221 6.36396103 52.363961 12.7279221 46 6.36396103 47.4142136 4.94974747"></polygon>
@@ -23,11 +23,9 @@
       </svg>
     </a>
   </div>
-  <nav class="header__nav {{#if menuOpened}}header__nav--active{{/if}}">
-    <a class="header__link" href="#home">Home</a>
-    <a class="header__link header__link--active" href="#about">About</a>
-    <a class="header__link" href="#hub">Hub</a>
-    <a class="header__link" href="#work">Work</a>
-    <a class="header__link" href="#contact">Contact</a>
+  <nav class="header__nav {{#if menuOpened}}header__nav--active{{/if}} js-header-menu">
+    {{#each navigation}}
+      <a class="header__link{{#if isActive}} header__link--active{{/if}}" href="{{url}}">{{label}}</a>
+    {{/each}}
   </nav>
 </header>

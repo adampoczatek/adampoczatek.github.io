@@ -36,12 +36,14 @@ button {
   font-weight: 100;
   line-height: 1.5;
   letter-spacing: -0.01em;
+  transition: all 0.1s;
 }
 
 input,
 textarea,
 select {
   border: 2px solid rgba(0, 0, 0, 0.25);
+  padding: 0.5em 1em;
   padding: var(--global-spacing-small) var(--global-spacing-regular);
 }
 
@@ -126,7 +128,7 @@ select:disabled {
   color: rgba(0, 0, 0, 0.5);
 }
 
-@media all and (min-width: 1000px) {
+@media all and (min-width: 1020px) {
   input,
   select {
     height: 2.8em;

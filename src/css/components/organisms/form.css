@@ -59,7 +59,7 @@
   }
 }
 
-@media all and (min-width: 1000px) {
+@media all and (min-width: 1020px) {
   .form__columns {
     display: flex;
     flex-direction: row;

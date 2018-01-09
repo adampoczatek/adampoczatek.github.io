@@ -1,3 +1,8 @@
+const menu = require('../../../navigation');
+const navigation = Array.slice.call(menu);
+
+navigation[0].isActive = true;
+
 module.exports = {
   name: 'header',
   label: 'Header',
@@ -5,6 +10,9 @@ module.exports = {
     {
       name: 'default',
       label: 'Default',
+      context: {
+        navigation: navigation,
+      }
     },
     {
       name: 'condensed',
@@ -12,6 +20,7 @@ module.exports = {
       context: {
         classes: 'header--condensed',
         menuLabel: 'Menu',
+        navigation: navigation,
       }
     },
     {
@@ -21,6 +30,7 @@ module.exports = {
         classes: 'header--condensed',
         menuLabel: 'Close',
         menuOpened: true,
+        navigation: navigation,
       }
     }
   ]
