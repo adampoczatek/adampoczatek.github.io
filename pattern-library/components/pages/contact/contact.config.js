@@ -1,10 +1,10 @@
 const navigation = require('../../navigation')();
 
-navigation[0].isActive = true;
+navigation[4].isActive = true;
 
 module.exports = {
-  name: 'home',
-  label: 'Home',
+  name: 'contact',
+  label: 'Contact',
   context: {
     header: {
       menuLabel: 'Menu',

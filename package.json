@@ -1,6 +1,6 @@
 {
-  "name": "adaz.github.io",
-  "version": "2.0.0",
+  "name": "adampoczatek.github.io",
+  "version": "3.0.0",
   "description": "Web Dev & Design Blog",
   "main": "",
   "scripts": {
@@ -21,7 +21,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/adaz/adaz.github.io.git"
+    "url": "https://github.com/adampoczatek/adampoczatek.github.io.git"
   },
   "keywords": [
     "Blog",
@@ -34,7 +34,7 @@
   "author": "Adam Poczatek",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/adaz/adaz.github.io/issues"
+    "url": "https://github.com/adampoczatek/adampoczatek.github.io/issues"
   },
   "fractal": {
     "main": "pattern-library/fractal.js"

@@ -1,5 +1,4 @@
-const menu = require('../../navigation');
-const navigation = Array.prototype.slice.call(menu);
+const navigation = require('../../navigation')();
 
 navigation[1].isActive = true;
 
