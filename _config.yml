@@ -1,2 +1,28 @@
+# Site conifg
 markdown: redcarpet
 permalink: /hub/:year/:month/:day/:title/
+cdn_url: https://dcdcsyitwqi02.cloudfront.net
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - node_modules
+
+# Personal details
+first_name: Adam
+last_name: Poczatek
+email: hello@adamp.co.uk
+telephone: 07543 920 765
+telephone_global: 0044 7543 920 765
+
+# Social
+twitter_username: adampoczatek
+github_username: adampoczatek
+linkedin_username: adam-poczatek-11211546
+google_plus: 116924436997592588589
+
+# Site info
+title: Adam P
+description: Adam Poczatek - Personal Website
+website: http://adampoczatek.com
+color: "#0000ff"
