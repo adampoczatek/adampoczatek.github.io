@@ -1,5 +1,5 @@
 # Site conifg
-markdown: redcarpet
+markdown: kramdown
 permalink: /hub/:year/:month/:day/:title/
 cdn_url: https://dcdcsyitwqi02.cloudfront.net
 exclude:
