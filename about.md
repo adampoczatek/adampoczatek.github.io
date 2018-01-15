@@ -9,7 +9,7 @@ permalink: /about
 
 ***My name is Adam Poczatek and I'm web designer and developer from Reading, UK.***
 
-I've been playing around with the web for a while and I decided it's time to give something back to the community.</p>
+I've been playing around with the web for a while and I decided it's time to give something back to the community.
 
 I often struggle to keep up with the latest trends and I know many other developers feel the same &mdash; it seems like there is a new *thing* being released every single day and it feels overwhelming at times.
 
