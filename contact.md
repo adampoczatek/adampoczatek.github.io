@@ -5,7 +5,7 @@ description: Contact me If you have any queries about web development and UI des
 permalink: /contact
 ---
 
-# Contact</h1>
+# Contact
 
 ***Starting a new project and need some guidance? I made some mistakes so you don't have to.***
 
