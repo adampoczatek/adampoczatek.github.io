@@ -1,15 +1,21 @@
 ---
-layout: default
-title: Contact me
-permalink: /contact/
+layout: splash
+title: Contact Adam Poczatek - Web dev & designer from Reading, UK
+description: Contact me If you have any queries about web development and UI design contact me - I'd be happy to help you with any digital project.
+permalink: /contact
 ---
 
-#Contact
+# Contact</h1>
 
-Mobile: [07543 920 765](tel:07543920765)
+***Starting a new project and need some guidance? I made some mistakes so you don't have to.***
 
-E-mail: [hello.adaz@gmail.com](mailto:hello.adaz@gmail.com)
+If you need a help with your project or you have some questions about the web then just give me a shout.
 
-Twitter: [@adampoczatek](//twitter.com/adampoczatek)
+**Email:**
+[{{ site.email }}](mailto:{{site.email}})
 
-GitHub: [adampoczatek](//github.com/adampoczatek)
+**Twitter:**
+[@{{ site.twitter_username }}](https://twitter.com/{{ site.twitter_username }})
+
+**Telephone:**
+[{{ site.telephone }}](tel:{{ site.telephone_global }})
