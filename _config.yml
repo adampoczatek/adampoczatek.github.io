@@ -1,6 +1,2 @@
 markdown: redcarpet
-exclude:
-  - node_modules
-permalink: /blog/:year/:month/:day/:title/
-gems:
-  - jekyll-sitemap
+permalink: /hub/:year/:month/:day/:title/
