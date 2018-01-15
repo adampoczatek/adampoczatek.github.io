@@ -9,7 +9,7 @@ permalink: /contact
 
 ***Starting a new project and need some guidance? I made some mistakes so you don't have to.***
 
-If you need a help with your project or you have some questions about the web then just give me a shout.
+If you need help with your project or you have some questions about the web then just give me a shout.
 
 **Email:**
 [{{ site.email }}](mailto:{{site.email}})
