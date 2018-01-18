@@ -1,13 +1,13 @@
 ---
 layout: splash
 title: Adam Poczatek - Front-end dev and UX Designer - Reading, UK
-description: Designing and building websites and web apps for over 10 years. Currently working as a lead front-end developer for Majestic Wine.
+description: Designing and building websites and web apps for companies around the UK for over 10 years - currently a lead front-end developer at Majestic Wine
 ---
 
 # Hello
 
 ***My name is Adam Poczatek and I’m a web developer and designer from Reading, UK.***
 
-This is my personal website where I document my work, share thoughts and generally talk about the *web industry*.
+This is my personal website where I [document my work](/work/), share thoughts and generally talk about the *web industry*.
 
 <a href="/about" class="button button--primary">More About This</a>

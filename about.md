@@ -1,8 +1,8 @@
 ---
 layout: default
 title: About Adam Poczatek - Lead front-end developer & UI designer
-description: I'm a web developer from Reading, UK, currently working as a lead front-end developer. I specialize in front-end development, UI and UX design.
-permalink: /about
+description: Based in Reading, UK, currently working as a lead front-end developer at Majestic - My name is Adam Poczatek and I specialise in front-end, UI and UX design
+permalink: /about/
 ---
 
 # About
@@ -24,3 +24,5 @@ Over the last couple of years I've been lucky enough to work with some great com
 I worked on various different projects ranging from simple brochure websites that we designed, built and deployed within a day, to huge projects that took us months of carefully planned work to make sure it was all done and dusted by the release date.
 
 I always loved all aspects of web design &mdash; from inception meetings and brainstorming, to wireframing and design,  to development and testing and, of course, release and maintenance &mdash; that's why I always struggle to say exactly what my job title is! In most cases I was involved in all of these steps but I would say my main focus was always on the *UX, UI design and front-end development*.
+
+For more details about my previous projects checkout my [work](/work/) page.

@@ -1,0 +1,19 @@
+{% include header.html %}
+
+<div class="hero">
+    <img src="{{ site.cdn_url }}{{ page.heroImage }}" alt="{{ page.heroText }}" class="hero__image" />
+    <div class="hero__content">
+        <h1 class="hero__title">{{ page.heroTitle }}</h1>
+    </div>
+    <div class="hero__content">
+        <h3 class="hero__subtitle">{{ page.heroSubtitle }}</h3>
+    </div>
+</div>
+
+<section class="content">
+  <div class="content__section">
+    {{ content }}
+  </div>
+</section>
+
+{% include footer.html %}
