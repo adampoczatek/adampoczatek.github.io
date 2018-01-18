@@ -1,15 +1,15 @@
 ---
 layout: splash
 title: Contact Adam Poczatek - Web dev & designer from Reading, UK
-description: Contact me If you have any queries about web development and UI design contact me - I'd be happy to help you with any digital project.
-permalink: /contact
+description: For any queries about web development, user experience or UI design contact Adam Poczatek - lead front-end developer from Reading, UK
+permalink: /contact/
 ---
 
 # Contact
 
 ***Starting a new project and need some guidance? I made some mistakes so you don't have to.***
 
-If you need a help with your project or you have some questions about the web then just give me a shout.
+If you need help with your project or you have some questions about the web then just give me a shout.
 
 **Email:**
 [{{ site.email }}](mailto:{{site.email}})
