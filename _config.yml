@@ -2,6 +2,7 @@
 markdown: kramdown
 permalink: /hub/:year/:month/:day/:title/
 cdn_url: https://dcdcsyitwqi02.cloudfront.net
+ui_release: '1.0.0'
 exclude:
   - Gemfile
   - Gemfile.lock
