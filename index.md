@@ -8,6 +8,6 @@ description: Designing and building websites and web apps for companies around t
 
 ***My name is Adam Poczatek and I’m a web developer and designer from Reading, UK.***
 
-This is my personal website where I [document my work](/work/), share thoughts and generally talk about the *web industry*.
+This is my personal website where I [document my work](/work/), share thoughts and generally talk about the web industry.
 
 <a href="/about" class="button button--primary">More About This</a>
