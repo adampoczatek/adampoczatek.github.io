@@ -10,40 +10,22 @@ heroImage: /images/case-studies/majestic/hero.jpg
 heroImageText: Laptop with Majestic Wine website on the screen next to a glass of wine
 ---
 
-1. [Overview](#overview)
-  * [My role on the team](#my-role-on-the-team)
-  * [Business as usual](#business-as-usual)
-2. [Design](#design)
-  * [Objectives](#design-objectives)
-  * [Design approach](#design-approach)
-  * [Tools](#tools)
-3. [Development Preparation](#development-preparation)
-  * [Development Environment](#development-environment)
-  * [CSS](#css)
-  * [JavaScript](#javascript)
-4. [Development Team](#development-team)
-5. [Project Kick off](#project-kick-off)
-6. [Development](#development)
-  * [Release](#release)
-  * [What's next](#whats-next)
-7. [Retrospective](#retrospective)
-
----
-
 Overview
 --------
 
 Majestic e-commerce website was first re-built back in 2011 by a third-party agency and it was pretty innovative at that time — it had a slick design and a dedicated mobile site.
 
+<img src="{{ site.cdn_url }}/images/case-studies/majestic/majestic-wine-old.jpg" />
+
 As the business grew, the requirements have changed and the website had to adopt. One of the biggest problems, however, was the fact that our website has been maintained by an agency and making code chagnes was expensive.
 
-Back in 2015, Majestic [acquired](http://www.bbc.co.uk/news/business-32246651) a company called [Naked Wines](https://www.nakedwines.co.uk) — a relatively small tech company with an excellent development team.
+Back in 2015, Majestic [acquired](http://www.bbc.co.uk/news/business-32246651) a company called [Naked Wines](https://www.nakedwines.co.uk) — a relatively small tech company but with an excellent development team.
 
 The guys at Naked Wines have built an amazing plaftorm for their e-commerce site, and naturally, Majestic wanted it too.
 
 ### My Role on the Team
 
-I joined Majestic back in April 2016 to help with the replatform project. My official job title was lead front-end developer but since Majestic didn't really have an in-house development team, I was responsible for the UX, visual design and the front-end build.
+I joined Majestic back in April 2016 to help with the replatform project. My official job title was lead front-end developer but since Majestic didn't really have an in-house development team, I was responsible for the UX, visual design as well as the front-end build.
 
 We quickly managed to form a small team that consisted of a UX lead, front-end developer and myself.
 
@@ -55,11 +37,9 @@ More importantly though, it was an opportunity for me to get to know the team an
 
 We started looking at the replatform project right after Christmas but there was a small problem — Majestic updates their website very frequently so we couldn't dedicate 100% of our time on the new and shiny stuff.
 
-The amount of changes we had to make on the current site was huge — our developer was occupied for most of his time and couldn't focus on the main project as much as we wanted — we knew we had to do something about it.
+The amount of changes we had to make on the current site was huge — our developer was occupied for most of his time and couldn't focus on the main project as much as we wanted and we knew we had to do something about it.
 
 Within the couple of weeks though we managed to optimise some processes and free up some of our time.
-
----
 
 Design
 ------
@@ -70,6 +50,8 @@ First, we had an inception meeting followed by couple of rounds of requirements 
 
 Majestic design team has done an amazing job over the last couple of years by updating the brand across all of our marketing materials. Most of our stores have been revamped too.
 
+<img src="{{ site.cdn_url }}/images/case-studies/majestic/majestic-design.jpg" />
+
 Naturally, we wanted to make sure the new website follows the same guidelines. In fact, we wanted to offer our customers the same great experience online as they have in store.
 
 ### Design Approach
@@ -79,6 +61,8 @@ We spent some time in stores talking to the staff and customers — we wanted to
 Next, we carefully reviewed Majestic brand guides and went through all brochures, direct mail, email designs etc. to identify any design patterns that we could reuse online.
 
 Our deadlines were tight. We couldn't afford to spend a lot of time designing one page and revising it over and over again until it's perfect — we took a different approach instead. We asked ourselves what's the minimum we need to deliver to get some feedback? So we started with some base styles like buttons, form elements, typography, and we asked for feedback as soon as we had something to show.
+
+<img src="{{ site.cdn_url }}/images/case-studies/majestic/majestic-style-guide.jpg" />
 
 Once we had the base style signed off we could move onto slightly bigger components like the header, footer, carousel etc. The more components we had the quicker it was to design new ones as the patterns started to repeat.
 
@@ -91,8 +75,6 @@ Our choice for the design tool was [Sketch](https://www.sketchapp.com/) — laye
 We had to find a way to share our designs and capture feedback quickly — it's a busy environment and getting all stakeholders in one room wasn't always feasible. We decided to give [Invision App](https://www.invisionapp.com/) a go and it worked perfectly.
 
 Once the final designs were signed off we then exported them to [Zeplin](https://zeplin.io/), so that developers knew exactly what colours, fonts and spacing to use.
-
----
 
 Development Preparation
 -----------------------
@@ -135,8 +117,6 @@ To keep everything consistent we followed [airbnb style guide](https://github.co
 
 To glue it all together we used npm scripts — very simple and elegant solution for managing your build tasks.
 
----
-
 Development Team
 ----------------
 
@@ -156,8 +136,6 @@ We had to act quickly so our recruitment process was pretty straightforward:
 
 Within the 3 weeks we reviewed dozens of resumés and we asked over 30 people to complete the technical test. After a couple of face-to-face interviews we managed to offer the role to 3 excellent front-end developers.
 
----
-
 Project Kick-off
 ----------------
 
@@ -166,8 +144,6 @@ Just before our first sprint we all went to Norwich to meet the Naked Wines team
 The fact that back-end and front-end teams were in two different offices meant that good communication was the key.
 
 We agreed to go with 6 sprints, 2 weeks each and we gave ourselves an extra week after the last sprint for final touches.
-
----
 
 Development
 -----------
@@ -182,13 +158,13 @@ We had _many_ challenges to overcome but I'm pleased to say we made it — we re
 
 It's also worth mentioning that we received a lot of positive comments from our customers — they loved the new site.
 
+<img src="{{ site.cdn_url }}/images/case-studies/majestic/majestic-plp-preview.jpg" />
+
 ### What's Next?
 
 As I mentioned before, we had to compromise on quality in some areas of the site in order to get it ready for the release so there's definitely a room for improvement. That said, we _built, tested and released_ a massive e-commerce project pretty much from scratch in just couple of months — that's a hell of an achievement.
 
 Besides, this project was a simple lift-and-shift — technically it's the same website, just (much) faster and consistent with our branding, however, with this new platform in place Majestic can give its customers much better online experience. Definitely keep an eye on it!
-
----
 
 Retrospective
 -------------
@@ -197,14 +173,14 @@ This is possibly the most exciting and challenging project I have worked on to d
 
 **What worked well?**
 
-* **Planning** — this project was extremely well planned and organised, it really felt like everyone was on the same page.
-* **Design and development** — component-based approach helped us reuse the same patterns across different pages and features resulting in reduced development time and much cleaner code. Eventually, the back-end team was able to build and integrate new pages using our CSS framework without much support from our team.
+* **Planning** &mdash; this project was extremely well planned and organised, it really felt like everyone was on the same page.
+* **Design and development** &mdash; component-based approach helped us reuse the same patterns across different pages and features resulting in reduced development time and much cleaner code. Eventually, the back-end team was able to build and integrate new pages using our CSS framework without much support from my team.
 
 **What wasn't so good?**
 
-* **Communication** — front-end and back-end teams were based in two different offices and I don't think the teams had enough time to get to know each other properly which lead to miscommunication at times.
-* **Missing designs** — we designed all the core journeys and had them signed off before the first sprint started. That said, we still had a lot more pages to design which occupied most of my time during the first couple of sprints and I couldn't support my team as much as I would like to.
+* **Communication** &mdash; front-end and back-end teams were based in two different offices and I don't think the teams had enough time to get to know each other properly which lead to miscommunication at times.
+* **Missing designs** &mdash; we designed all the core journeys and had them signed off before the first sprint started, however, we still had a lot more pages to design which occupied most of my time during the first couple of sprints and I couldn't support my team as much as I would like to.
 
-Yes, we had some problems along the way, but this was normal for any project of this scale. I really enjoyed working with Majestic and Naked Wines — it was an amazing experience for me, I met some great people and learnt a lot.
+Yes, we had some problems along the way, but this was normal for any project of this scale. I really enjoyed working with Majestic and Naked Wines &mdash; it was an amazing experience for me, I met some great people and learnt a lot.
 
 Lastly, I encourage you to visit [Majestic](https://www.majestic.co.uk/) online and in store, and definitely check out [Naked Wines](https://www.nakedwines.com/) — both companies offer an amazing range of products and a unique experience of buying wine.
