@@ -62,7 +62,6 @@
   <link media="all" rel="stylesheet" href="{{ site.cdn_url }}/{{ site.ui_release }}/css/components/atoms/button.css" />
   <link media="all" rel="stylesheet" href="{{ site.cdn_url }}/{{ site.ui_release }}/css/components/atoms/content.css" />
   <link media="all" rel="stylesheet" href="{{ site.cdn_url }}/{{ site.ui_release }}/css/components/atoms/splash.css" />
-  <link media="all" rel="stylesheet" href="{{ site.cdn_url }}/{{ site.ui_release }}/css/components/molecules/grid.css" />
   <link media="all" rel="stylesheet" href="{{ site.cdn_url }}/{{ site.ui_release }}/css/components/molecules/hero.css" />
   <link media="all" rel="stylesheet" href="{{ site.cdn_url }}/{{ site.ui_release }}/css/components/organisms/form.css" />
   <link media="all" rel="stylesheet" href="{{ site.cdn_url }}/{{ site.ui_release }}/css/components/organisms/header.css" />
@@ -102,7 +101,7 @@
     <nav class="header__nav  js-header-menu">
       <a class="header__link{% if page.url == '/' %} header__link--active {% endif %}" href="/">Home</a>
       <a class="header__link{% if page.url == '/about/' %} header__link--active {% endif %}" href="/about/">About</a>
-      <a class="header__link{% if page.url == '/work/' %} header__link--active {% endif %}" href="/work/">Work</a>
+      <a class="header__link{% if page.url == '/work/' or page.parent_permalink == '/work/' %} header__link--active {% endif %}" href="/work/">Work</a>
       <a class="header__link{% if page.url == '/contact/' %} header__link--active {% endif %}" href="/contact/">Contact</a>
     </nav>
   </header>

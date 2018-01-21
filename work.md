@@ -13,8 +13,6 @@ heroImageText: Laptop with Majestic Wine website on the screen next to a glass o
 
 ***Over the last few years I worked with some amazing companies &mdash; here's what I've been up to recently.***
 
----
-
 ### [Majestic Wine &mdash; Replatform](/work/majestic-replatform)
 
 **Building an e-commerce site from scratch in couple of months? Sure, why not!**
