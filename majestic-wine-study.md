@@ -4,6 +4,7 @@ title: Adam Poczatek - Complete Redesign of Majestic Wine Website
 description: Short story of how we made Majestic Wine website faster and more enjoyable to use with new updated UX, fresh UI and clean front-end code
 image: /images/case-studies/majestic/hero.jpg
 permalink: /work/majestic-replatform/
+parent_permalink: /work/
 heroTitle: Majestic Wine - Replatform
 heroSubtitle: This is possibly the most exciting and challenging project I have worked on to date &mdash; it took us months of hard work but I'm pleased to say it paid off.
 heroImage: /images/case-studies/majestic/hero.jpg
@@ -15,7 +16,7 @@ Overview
 
 Majestic e-commerce website was first re-built back in 2011 by a third-party agency and it was pretty innovative at that time — it had a slick design and a dedicated mobile site.
 
-<img src="{{ site.cdn_url }}/images/case-studies/majestic/majestic-wine-old.jpg" />
+<img alt="Majestic Wine website before the replatform project" src="{{ site.cdn_url }}/images/case-studies/majestic/majestic-wine-old.jpg" />
 
 As the business grew, the requirements have changed and the website had to adopt. One of the biggest problems, however, was the fact that our website has been maintained by an agency and making code chagnes was expensive.
 
@@ -50,7 +51,7 @@ First, we had an inception meeting followed by couple of rounds of requirements 
 
 Majestic design team has done an amazing job over the last couple of years by updating the brand across all of our marketing materials. Most of our stores have been revamped too.
 
-<img src="{{ site.cdn_url }}/images/case-studies/majestic/majestic-design.jpg" />
+<img alt="Photo of Majestic Wine designs taken in store" src="{{ site.cdn_url }}/images/case-studies/majestic/majestic-design.jpg" />
 
 Naturally, we wanted to make sure the new website follows the same guidelines. In fact, we wanted to offer our customers the same great experience online as they have in store.
 
@@ -62,7 +63,7 @@ Next, we carefully reviewed Majestic brand guides and went through all brochures
 
 Our deadlines were tight. We couldn't afford to spend a lot of time designing one page and revising it over and over again until it's perfect — we took a different approach instead. We asked ourselves what's the minimum we need to deliver to get some feedback? So we started with some base styles like buttons, form elements, typography, and we asked for feedback as soon as we had something to show.
 
-<img src="{{ site.cdn_url }}/images/case-studies/majestic/majestic-style-guide.jpg" />
+<img alt="Screen shot of Majest Wine style guide on Invision App" src="{{ site.cdn_url }}/images/case-studies/majestic/majestic-style-guide.jpg" />
 
 Once we had the base style signed off we could move onto slightly bigger components like the header, footer, carousel etc. The more components we had the quicker it was to design new ones as the patterns started to repeat.
 
@@ -158,7 +159,7 @@ We had _many_ challenges to overcome but I'm pleased to say we made it — we re
 
 It's also worth mentioning that we received a lot of positive comments from our customers — they loved the new site.
 
-<img src="{{ site.cdn_url }}/images/case-studies/majestic/majestic-plp-preview.jpg" />
+<img alt="Majestic Wine 2017/2018 redesign" src="{{ site.cdn_url }}/images/case-studies/majestic/majestic-plp-preview.jpg" />
 
 ### What's Next?
 
