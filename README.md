@@ -3,7 +3,7 @@ Welcome to [www.adampoczatek.com](https://www.adampoczatek.com)
 
 **Note:** 
 
-> This is only the website server project, you also need to run the [UI repository](https://github.com/adampoczatek/adamp.ui). 
+This is only the website server project, you also need to run the [UI repository](https://github.com/adampoczatek/adamp.ui). 
 
 ---
 
