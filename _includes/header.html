@@ -49,24 +49,7 @@
   <link media="all" rel="stylesheet" href="{{ site.cdn_url }}/{{ site.ui_release }}/css/base/typography/global.css" />
   <link media="all" rel="stylesheet" href="{{ site.cdn_url }}/{{ site.ui_release }}/css/base/typography/headings.css" />
   <link media="all" rel="stylesheet" href="{{ site.cdn_url }}/{{ site.ui_release }}/css/base/typography/paragraphs.css" />
-  <link media="all" rel="stylesheet" href="{{ site.cdn_url }}/{{ site.ui_release }}/css/base/typography/lists.css" />
-  <link media="all" rel="stylesheet" href="{{ site.cdn_url }}/{{ site.ui_release }}/css/base/typography/inline.css" />
-  <link media="all" rel="stylesheet" href="{{ site.cdn_url }}/{{ site.ui_release }}/css/base/typography/links.css" />
-  <link media="all" rel="stylesheet" href="{{ site.cdn_url }}/{{ site.ui_release }}/css/base/typography/quotes.css" />
-  <link media="all" rel="stylesheet" href="{{ site.cdn_url }}/{{ site.ui_release }}/css/base/typography/hr.css" />
-  <link media="all" rel="stylesheet" href="{{ site.cdn_url }}/{{ site.ui_release }}/css/base/figure.css" />
-  <link media="all" rel="stylesheet" href="{{ site.cdn_url }}/{{ site.ui_release }}/css/base/forms.css" />
-  <link media="all" rel="stylesheet" href="{{ site.cdn_url }}/{{ site.ui_release }}/css/base/images.css" />
-  <link media="all" rel="stylesheet" href="{{ site.cdn_url }}/{{ site.ui_release }}/css/base/tables.css" />
-  <link media="all" rel="stylesheet" href="{{ site.cdn_url }}/{{ site.ui_release }}/css/base/codes.css" />
-  <link media="all" rel="stylesheet" href="{{ site.cdn_url }}/{{ site.ui_release }}/css/components/atoms/button.css" />
-  <link media="all" rel="stylesheet" href="{{ site.cdn_url }}/{{ site.ui_release }}/css/components/atoms/content.css" />
-  <link media="all" rel="stylesheet" href="{{ site.cdn_url }}/{{ site.ui_release }}/css/components/atoms/splash.css" />
-  <link media="all" rel="stylesheet" href="{{ site.cdn_url }}/{{ site.ui_release }}/css/components/molecules/hero.css" />
-  <link media="all" rel="stylesheet" href="{{ site.cdn_url }}/{{ site.ui_release }}/css/components/organisms/form.css" />
   <link media="all" rel="stylesheet" href="{{ site.cdn_url }}/{{ site.ui_release }}/css/components/organisms/header.css" />
-  <link media="all" rel="stylesheet" href="{{ site.cdn_url }}/{{ site.ui_release }}/css/helpers/content.css" />
-  <link media="all" rel="stylesheet" href="{{ site.cdn_url }}/{{ site.ui_release }}/css/helpers/table.css" />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -98,7 +81,7 @@
         </svg>
       </a>
     </div>
-    <nav class="header__nav  js-header-menu">
+    <nav class="header__nav js-header-menu">
       <a class="header__link{% if page.url == '/' %} header__link--active {% endif %}" href="/">Home</a>
       <a class="header__link{% if page.url == '/about/' %} header__link--active {% endif %}" href="/about/">About</a>
       <a class="header__link{% if page.url == '/work/' or page.parent_permalink == '/work/' %} header__link--active {% endif %}" href="/work/">Work</a>
