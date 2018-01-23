@@ -1,3 +1,6 @@
+  <footer class="footer">
+  <p class="footer__text">View source code on <a href="https://github.com/adampoczatek/adampoczatek.github.io">Github</a></p>
+ </footer>
   {% if site.environment != 'development' %}
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112496312-1"></script>
   <script>
@@ -18,6 +21,25 @@
     })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
   </script>
   {% endif %}
+
+  <link media="all" rel="stylesheet" href="{{ site.cdn_url }}/{{ site.ui_release }}/css/base/typography/lists.css" />
+  <link media="all" rel="stylesheet" href="{{ site.cdn_url }}/{{ site.ui_release }}/css/base/typography/inline.css" />
+  <link media="all" rel="stylesheet" href="{{ site.cdn_url }}/{{ site.ui_release }}/css/base/typography/links.css" />
+  <link media="all" rel="stylesheet" href="{{ site.cdn_url }}/{{ site.ui_release }}/css/base/typography/quotes.css" />
+  <link media="all" rel="stylesheet" href="{{ site.cdn_url }}/{{ site.ui_release }}/css/base/typography/hr.css" />
+  <link media="all" rel="stylesheet" href="{{ site.cdn_url }}/{{ site.ui_release }}/css/base/figure.css" />
+  <link media="all" rel="stylesheet" href="{{ site.cdn_url }}/{{ site.ui_release }}/css/base/forms.css" />
+  <link media="all" rel="stylesheet" href="{{ site.cdn_url }}/{{ site.ui_release }}/css/base/images.css" />
+  <link media="all" rel="stylesheet" href="{{ site.cdn_url }}/{{ site.ui_release }}/css/base/tables.css" />
+  <link media="all" rel="stylesheet" href="{{ site.cdn_url }}/{{ site.ui_release }}/css/base/codes.css" />
+  <link media="all" rel="stylesheet" href="{{ site.cdn_url }}/{{ site.ui_release }}/css/components/atoms/button.css" />
+  <link media="all" rel="stylesheet" href="{{ site.cdn_url }}/{{ site.ui_release }}/css/components/atoms/content.css" />
+  <link media="all" rel="stylesheet" href="{{ site.cdn_url }}/{{ site.ui_release }}/css/components/atoms/splash.css" />
+  <link media="all" rel="stylesheet" href="{{ site.cdn_url }}/{{ site.ui_release }}/css/components/molecules/hero.css" />
+  <link media="all" rel="stylesheet" href="{{ site.cdn_url }}/{{ site.ui_release }}/css/components/organisms/form.css" />
+  <link media="all" rel="stylesheet" href="{{ site.cdn_url }}/{{ site.ui_release }}/css/components/organisms/footer.css" />
+  <link media="all" rel="stylesheet" href="{{ site.cdn_url }}/{{ site.ui_release }}/css/helpers/content.css" />
+  <link media="all" rel="stylesheet" href="{{ site.cdn_url }}/{{ site.ui_release }}/css/helpers/table.css" />
   <script src="{{ site.cdn_url }}/{{ site.ui_release }}/js/global.bundle.js"></script>
 </body>
 </html>
