@@ -13,10 +13,15 @@ heroImageText: Laptop with Majestic Wine website on the screen next to a glass o
 
 ***Over the last few years I worked with some amazing companies &mdash; here's what I've been up to recently.***
 
-### [Majestic Wine &mdash; Replatform](/work/majestic-replatform)
+## Majestic Wine &mdash; Replatform
+<footer class="type--insignificant">
+    <small>
+        <time datetime="2016-01-01">January, 2016</time> to <time datetime="2017-10-01">October, 2017</time>
+    </small>
+</footer>
 
 **Building an e-commerce site from scratch in couple of months? Sure, why not!**
 
 I worked with Majestic Wine and helped them move away from a legacy system to a brand new and shiny platform &mdash; we improved the UX, updated design and kept the front-end code clean. See how it happend!
 
-<a class="button button--primary" href="/work/majestic-replatform">Read More</a>
+<a class="button button--primary" href="/work/majestic-replatform" aria-label="Read more about Majestic Replatform project">Read More</a>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-GB">
 <head>
   <title>{{ page.title }}</title>
   <meta name="google-site-verification" content="ITB0WsME_jvXaHijV7zNJ-s1C_zFwaOTrwnlKYW-qzw" />
@@ -62,6 +62,7 @@
   <link media="all" rel="stylesheet" href="{{ site.cdn_url }}/{{ site.ui_release }}/css/components/atoms/button.css" />
   <link media="all" rel="stylesheet" href="{{ site.cdn_url }}/{{ site.ui_release }}/css/components/atoms/content.css" />
   <link media="all" rel="stylesheet" href="{{ site.cdn_url }}/{{ site.ui_release }}/css/components/atoms/splash.css" />
+  <link media="all" rel="stylesheet" href="{{ site.cdn_url }}/{{ site.ui_release }}/css/components/atoms/type.css" />
   <link media="all" rel="stylesheet" href="{{ site.cdn_url }}/{{ site.ui_release }}/css/components/molecules/hero.css" />
   <link media="all" rel="stylesheet" href="{{ site.cdn_url }}/{{ site.ui_release }}/css/components/organisms/header.css" />
   <link media="all" rel="stylesheet" href="{{ site.cdn_url }}/{{ site.ui_release }}/css/components/organisms/form.css" />
@@ -77,7 +78,7 @@
 
   <header class="header js-header">
     <div class="header__main">
-      <a href="/" class="header__logo">
+      <a href="/" class="header__logo" aria-label="Adam Poczatek Logo - Go to home page">
         <svg class="header__symbol" width="29px" height="20px" viewBox="0 0 29 20" version="1.1" xmlns="http://www.w3.org/2000/svg"
           xmlns:xlink="http://www.w3.org/1999/xlink">
           <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-25.000000, -21.000000)">
@@ -100,9 +101,9 @@
       </a>
     </div>
     <nav class="header__nav js-header-menu">
-      <a class="header__link{% if page.url == '/' %} header__link--active {% endif %}" href="/">Home</a>
-      <a class="header__link{% if page.url == '/about/' %} header__link--active {% endif %}" href="/about/">About</a>
-      <a class="header__link{% if page.url == '/work/' or page.parent_permalink == '/work/' %} header__link--active {% endif %}" href="/work/">Work</a>
-      <a class="header__link{% if page.url == '/contact/' %} header__link--active {% endif %}" href="/contact/">Contact</a>
+      <a class="header__link{% if page.url == '/' %} header__link--active {% endif %}" href="/" aria-label="Go to home page">Home</a>
+      <a class="header__link{% if page.url == '/about/' %} header__link--active {% endif %}" href="/about/" aria-label="More about Adam and his website">About</a>
+      <a class="header__link{% if page.url == '/work/' or page.parent_permalink == '/work/' %} header__link--active {% endif %}" href="/work/" aria-label="Showcase of Adam's work">Work</a>
+      <a class="header__link{% if page.url == '/contact/' %} header__link--active {% endif %}" href="/contact/" aria-label="Get in touch with Adam">Contact</a>
     </nav>
   </header>

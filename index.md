@@ -10,4 +10,4 @@ description: Designing and building websites and web apps for companies around t
 
 This is my personal website where I [document my work](/work/), share thoughts and generally talk about the web industry.
 
-<a href="/about/" class="button button--primary">More About This</a>
+<a href="/about/" class="button button--primary" aria-label="Read more about Adam and this website">More About This</a>
